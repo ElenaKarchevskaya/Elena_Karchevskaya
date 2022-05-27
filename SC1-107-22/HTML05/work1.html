@@ -20,24 +20,24 @@
                 <legend>Строка поиска</legend>
                 <input type="text" maxlength="10">
                 <input type="submit" value="Поиск"><br>
-                <input type="radio" name="radio[]" value="на сайте">на сайте
-                <input type="radio" name="radio[]" value="в google">в google
+                <input type="radio" name="radio[]" value="на сайте"><span>на сайте</span>
+                <input type="radio" name="radio[]" value="в google"><span>в google</span>
                 <div><em>Длина запроса не более 10 символов</em></div>
             </fieldset>
          </td>
          </form>
          <form action="http://fe.it-academy.by/TestForm.php" method="get">
-         <td><strong>Простая форма поиска с вариантами:</strong>
+         <td><span><strong>Простая форма поиска с вариантами:</strong></span>
              <br>
              <br>
             <fieldset>
                 <legend>Строка поиска</legend>
-                <input name="text" id="test" required placeholder="Обязательное поле для ввода">*
+                <input name="text" id="test" required placeholder="Обязательное поле для ввода"><strong>*</strong>
                 <label for="test">
                  <input type="submit" value="Искать"><br>
                 </label>
-                <input type="radio" name="radio[]" value="radio1">на сайте
-                <input type="radio" name="radio[]" value="radio2">в google
+                <input type="radio" name="radio[]" value="radio1"><span>на сайте</span>
+                <input type="radio" name="radio[]" value="radio2"><span>в google</span>
                 <div><em>*-обязательное поле</em></div>
             </fieldset>
          </td>
@@ -45,15 +45,15 @@
     </form>
     <form action="http://fe.it-academy.by/TestForm.php" method="get">
      <tr align="left">
-        <td><strong>Простая форма авторизации:</strong>
+        <td><span><strong>Простая форма авторизации:</strong></span>
             <br>
             <br>
           <fieldset>
                <legend>Авторизируйтесь</legend>
-               <input type="email" required>*Логин<br>
+               <input type="email" required><span>*Логин</span><br>
                <br>
-               <input type="password" required>*Пароль<br>
-               <input type="checkbox" name="check1"> Оставаться в системе
+               <input type="password" required><span>*Пароль</span><br>
+               <input type="checkbox" name="check1"><span>Оставаться в системе</span>
                <br>
                <input type="submit" value="Войти">
                <div><em>*-обязательное поле</em></div>
@@ -61,7 +61,7 @@
         </th>
     </form>
     <form action="http://fe.it-academy.by/TestForm.php" method="get">
-        <td><strong>Опрос (голосование):</strong>
+        <td><span><strong>Опрос (голосование):</strong></span>
             <br>
             <br>
            <fieldset>
@@ -85,14 +85,14 @@
                <legend>Оставте Ваш отзыв</legend>
                <input type="name" required>*Имя<br>
                <br>
-               <input type="email" name="email" placeholder="это обязательное поле" required>*e-mail<br>
+               <input type="email" name="email" placeholder="это обязательное поле" required><span>*e-mail</span><br>
                <br>
                <input type="submit" value="Отправить">
            </fieldset>
         </td>
     </form>
     <form action="http://fe.it-academy.by/TestForm.php" method="get">
-        <td><strong>Выпадающий и мультисписки:</strong>
+        <td><span><strong>Выпадающий и мультисписки:</strong></span>
            <fieldset>
                <legend>Города РБ</legend>
                <select name="list" id="list">
@@ -114,7 +114,7 @@
     </form>
     <form action="http://fe.it-academy.by/TestForm.php" enctype="multipart/form-data" method="POST">
      <tr align="left">
-        <td><strong>Загрузка файла на сервер</strong>
+        <td><span><strong>Загрузка файла на сервер</strong></span>
             <br>
             <br>
           <fieldset>
@@ -127,7 +127,7 @@
         </td>
     </form>
     <form action="http://fe.it-academy.by/TestForm.php" method="get">
-        <td><strong>Валидация данных HTML5:</strong>
+        <td><span><strong>Валидация данных HTML5:</strong></span>
             <br>
             <br>
            <fieldset>

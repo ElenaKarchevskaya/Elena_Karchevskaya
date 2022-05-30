@@ -1,0 +1,21 @@
+h3{
+    text-align: right;
+    font: normal small-caps bold 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 
+}
+div{
+    text-align: right;
+    font-weight: 500;
+    font-family:'Times New Roman', Times, serif
+}
+#k{
+    font-style: italic;
+}
+p{
+    text-align: left;
+    font-family: 'Bad Script', cursive;
+}
+#w{
+    text-align: left;
+    font-weight: bold;
+    text-decoration: underline;
+}

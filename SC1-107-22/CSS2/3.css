@@ -1,0 +1,17 @@
+header{
+    background-color: black;
+    color: green;
+    width: 400px;
+    max-height: 80px;
+    overflow: auto;
+}
+#w{
+     width: 350px;
+}
+.I{
+    font-weight: bold;
+    list-style-type: upper-roman;
+}
+.i{
+    list-style-type: lower-roman;
+}

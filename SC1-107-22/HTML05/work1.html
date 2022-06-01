@@ -125,7 +125,6 @@
                <input type="submit" value="Загрузить">
              </fieldset>
             </form>
-        </td>
         <td><span><strong>Валидация данных HTML5:</strong></span>
             <br>
             <br>
@@ -134,7 +133,7 @@
                <legend>Сторка поиска</legend>
                <input type="text" name="texy" pattern="^[А-Яа-яЁё\s]+$" required placeholder="только русские буквы"><br>
                <br>
-               <input type="tel" name="tel" pattern="^[0-9]+$" required placeholder="+375-29-1234567"><br>
+               <input type="tel" name="tel" pattern="^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$" required placeholder="+375291234567"><br>
                <br>
                <input type="submit" value="Проверить">
               </fieldset>

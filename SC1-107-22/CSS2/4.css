@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(164, 158, 155);
+}
+.nav{
+    float: left;
+    width: 15em;
+    background-color: rgb(192, 7, 7);
+}
+.content{
+    margin-left: 15em;
+    margin-bottom: .2em;
+    padding-top: 1em;
+    background-color: rgb(167, 126, 126);
+}
+.footer{
+    clear: both;
+    background-color: rgb(249, 211, 195);
+}
+img{
+    float: right;
+    width: 200px;
+    height: 200px;
+    padding: 1em;
+}
+.clear{
+    clear: both;
+}
+

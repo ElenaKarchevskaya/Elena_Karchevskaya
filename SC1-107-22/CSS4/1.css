@@ -1,0 +1,25 @@
+header{
+    width: 50%;
+    margin: 20px;
+}
+p{
+    text-indent: 20px;
+    border: 1px solid rgb(199, 197, 197);
+    border-radius: 0px 7px 0px 7px;
+}
+ol {
+    position: relative;
+    width: 150px;
+    list-style-image: url(doc.jpg);
+}
+li a {
+    display: block;
+}
+li a img{
+    visibility: hidden;
+    width: 10%;
+    position: absolute;
+    }
+li a:hover img{
+    visibility: visible;
+}

@@ -1,0 +1,36 @@
+table {
+    margin-top: 20px;
+    width: 41%;
+    border-collapse: collapse;
+}
+td,th {
+    text-align: left;
+    border: 0.5px dotted #6b6a6a;
+}
+.center th{
+    text-align: center;
+    font-weight: bold;
+    background: #6b6a6a;
+    border: 0.5px solid #6b6a6a;
+}
+tr td:first-child, tr th:first-child {
+    border-left: none;
+}
+tr td:last-child, tr th:first-child {
+    border-right: none;
+}
+tr:nth-child(odd){
+    background: rgb(195, 194, 195);
+}
+caption {
+    caption-side: bottom;
+}
+tr:hover {
+    background: rgb(16, 16, 201);
+    transition: 0.3s ease;
+}
+.center:hover th {
+    background: rgb(16, 16, 201);
+    transition: 0.3s ease;
+}
+

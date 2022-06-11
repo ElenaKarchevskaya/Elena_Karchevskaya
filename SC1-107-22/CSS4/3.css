@@ -1,0 +1,11 @@
+div {
+    border: 3px solid black;
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    margin: -2px;
+  }
+  
+  div:nth-child(2n+1) {
+    background: black;
+  }

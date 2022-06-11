@@ -1,0 +1,118 @@
+/*menu*/
+
+.menu *{
+    margin: 0;
+    padding: 0;
+}
+.menu ul li{
+    list-style: none;
+}
+.menu > ul{
+    display: flex;
+    justify-content: center;
+}
+.menu > ul li a{
+    display: block;
+    background: linear-gradient(162deg, rgba(238,238,240,1) 0%, rgba(201,201,202,1) 36%, rgba(135,135,136,1) 100%);    
+    padding: 15px;
+    color: #6e6e71;
+    text-align: center;
+    text-decoration: none;
+}
+.menu > ul li{
+    position: relative;
+    border: 2px solid #49494a;
+    border-radius: 4px;
+    width: 200px;
+    justify-content: center;
+}
+.menu li a:hover{
+    background: #424244;
+    color: #ffffff;
+}
+
+/*sub menu*/
+
+.menu li ul{
+    position: absolute;
+    min-width: 200px;
+    display: none;
+}
+.menu li > ul li a{
+    padding: 10px;
+    text-transform: none;
+    background: rgb(238,238,240);
+    background: linear-gradient(162deg, rgba(238,238,240,1) 0%, rgba(230,230,230,1) 36%, rgba(178,178,179,1) 100%);
+}
+.menu li:hover > ul{
+    display: block;
+}
+
+
+
+/*menu2*/
+
+.menu2 *{
+    margin: 0;
+    padding: 0;
+}
+.menu2 ul li{
+    display: none;
+    list-style: none;
+    left: 10px;
+    top: 7px;
+}
+.menu2 > ul{
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: center;
+}
+.menu2 > ul li a{
+    display: block;
+    background: linear-gradient(162deg, rgba(238,238,240,1) 0%, rgba(201,201,202,1) 36%, rgba(135,135,136,1) 100%);   
+    padding: 15px;
+    color: #6e6e71;
+    text-align: center;
+    text-decoration: none;
+}
+.menu2 > ul li{
+    position: relative;
+    border: 2px solid #49494a;
+    border-radius: 4px;
+    width: 200px;
+    justify-content: center;
+}
+.menu2 li a:hover{
+    background: #424244;
+    color: #ffffff;
+}
+
+/*sub menu2*/
+
+.menu2 li ul{
+    position: absolute;
+    right: -195px;
+    top: -7px;
+    display: none;
+}
+.menu2 li > ul li a{
+    padding: 15px;
+    text-transform: none;
+    background: linear-gradient(162deg, rgba(238,238,240,1) 0%, rgba(230,230,230,1) 36%, rgba(178,178,179,1) 100%);
+}
+.menu2 li:hover > ul{
+    display: block;
+}
+
+
+
+@media screen and (max-width:750px) {
+    .menu2 ul li{
+        display: block;
+    }
+    .menu ul li{
+        display: none;
+    }
+    
+}

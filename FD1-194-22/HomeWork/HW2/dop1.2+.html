@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+    </style>
+
+</head>
+<body>
+    <h2 align="center">Тэги dl,dt,dd</h2>
+    <p>Список описаний хорош для разметки вопросов-ответов, наименований и определений, категорий и тем. Он создаётся с помощью трёх тегов:</p>
+<ul>
+    <li><strong>&#8249;dl&#8250;</strong> (сокращение от <em>«description list»</em>) обозначает сам список описаний;</li>
+    <li><strong>&#8249;dt&#8250;</strong> (сокращение от <em>«description term»</em>) обозначает термин;</li>
+    <li><strong>&#8249;dd&#8250;</strong> (сокращение от <em>«description definition»</em>) обозначает описание или определение.</li>
+</ul>
+<p><strong> Теги &#8249;dt&#8250; и &#8249;dd&#8250; пишутся внутри &#8249;dl.&#8250;</strong></p>
+
+Каждый список <strong><u>dl</u></strong> может содержать один или несколько терминов и одно или несколько описаний для каждого термина. 
+<h4>Пример кода:</h4>
+<ul>
+    <li><strong>&#8249;dl&#8250;</strong></li>
+    <li><strong>&#8249;dt&#8250;</strong>HTML <strong>&#8249;/dt&#8250;</strong></li>
+    <li><strong>&#8249;dd&#8250;</strong>Язык гипертекстовой разметки <strong>&#8249;/dd&#8250;</strong></li>
+    <li><strong>&#8249;dt&#8250;</strong>CSS <strong>&#8249;/dt&#8250;</strong></li>
+    <li><strong>&#8249;dd&#8250;</strong>Каскадные таблицы стилей <strong>&#8249;/dd&#8250;</strong></li>
+    <li><strong>&#8249;dd&#8250;</strong>Язык для оформления HTML-документов<strong>&#8249;/dd&#8250;</strong></li>
+    <li><strong>&#8249;/dl&#8250;</strong>
+    </li>
+</ul>
+<h3>Итог:</h3>
+<dl>
+    <dt>HTML</dt>
+    <dd>Язык гипертекстовой ссылки</dd>
+    <dt>CSS</dt>
+    <dd>Каскадные таблицы стилей</dd>
+    <dd>Язык для оформления HTML-документов</dd>
+</dl>
+
+<h2 align="center">Тег<strong>&#8249;pre&#8250; &#8249;code&#8250; &#8249;tt&#8250;</strong></h2>
+<p>Тег <strong>&#8249;pre&#8250;</strong> используется для включения в HTML-документ предварительно отформатированного текста. Во вложенном в тег тексте сохраняются все пробелы и разрывы строк (как известно, браузеры по умолчанию любое количество идущих подряд пробелов показывают как один).</p>
+<h3>Пример:</h3>
+<ul>
+    <li><strong>&#8249;body&#8250;</strong></li>
+    <li><strong>&#8249;pre&#8250;</strong>Крошка сын
+        <ul>
+            <li>к отцу пришёл, <br>и спросила кроха: <br>— Что такое хорошо <br>и что такое плохо?<br>—<strong>&#8249;pre&#8250;</strong></li>
+        </ul>
+    </li>
+    <li><strong>&#8249;body&#8250;</strong></li>
+</ul>
+<h3>Результат:</h3>
+<pre>Крошка сын
+    к отцу пришёл,
+    и спросила кроха:
+    — Что такое 
+     хорошо
+     и что такое 
+     плохо? —
+</pre>
+<hr>
+<p>Тег <strong>&#8249;code&#8250;</strong> предназначен для отображения одной или нескольких строк текста, который представляет собой программный код. Сюда относятся имена переменных, ключевые слова, тексты функции и т.д. Браузеры обычно отображают содержимое контейнера  как моноширинный текст уменьшенного размера.</p>
+<h3>Пример:</h3>
+<ul>
+    <li><strong>&#8249;p&#8250;</strong> Код программы<strong>&#8249;p&#8250;</strong></li>
+    <li><strong>&#8249;p&#8250;&#8249;code&#8250;</strong></li>
+    <li>function checkParent (src, dest) {<strong>&#8249;br&#8250;</strong></li>
+    <li>while (src != null) {<strong>&#8249;br&#8250;</strong></li>
+    <li>if (src.tagName == dest) return src<strong>&#8249;br&#8250;</strong></li>
+    <li>src = src.parentElement<strong>&#8249;br&#8250;</strong></li>
+    <li>}<strong>&#8249;br&#8250;</strong></li>
+    <li>return null<strong>&#8249;br&#8250;</strong></li>
+    <li>}<strong>&#8249;code&#8250;&#8249;p&#8250;</strong></li>
+</ul>
+<h3>Итог:</h3>
+<p>Код программы</p>
+<p><code>
+    function checkParent (src, dest) {<Br>
+     while (src != null) {<Br>
+       if (src.tagName == dest) return src<Br>
+        src = src.parentElement<Br>
+     }<Br>
+     return null<Br>
+    }</code>
+</p>
+<hr>
+
+<p>Контейнер <strong>&#8249;tt&#8250;</strong>  отображает текст моноширинным текстом. Этот тег относится к группе тегов физического форматирования.</p>
+<h3>Пример:</h3>
+<ul>
+    <li><strong>&#8249;p&#8250;&#8249;tt&#8250;</strong>Lorem ipsum dolor sit amet<strong>&#8249;/tt&#8250;&#8249;/p&#8250;</strong></li>
+    <li><strong>&#8249;p&#8250;</strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem <br> 
+        nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. 
+        Ut wisis enim ad minim veniam, quis nostrud exerci tution.<strong>&#8249;/p&#8250;</strong>
+    </li>
+</ul>
+<h3>Итог:</h3>
+<p><tt>Lorem ipsum dolor sit amet</tt></p>
+
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. 
+Ut wisis enim ad minim veniam, quis nostrud exerci tution.</p>
+
+
+</body>
+</html>

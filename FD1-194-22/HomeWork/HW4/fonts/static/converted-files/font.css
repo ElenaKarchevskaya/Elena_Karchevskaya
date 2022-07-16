@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Kurale-Regular';
+  src: url('Kurale-Regular.eot');
+  src: url('Kurale-Regular.eot?#iefix') format('embedded-opentype'),
+       url('Kurale-Regular.svg#Kurale-Regular') format('svg'),
+       url('Kurale-Regular.ttf') format('truetype'),
+       url('Kurale-Regular.woff') format('woff'),
+       url('Kurale-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

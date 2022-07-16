@@ -1,0 +1,17 @@
+.flexbox{
+    display: flex;
+    width: 100%;
+    padding-top: 20px;
+}
+.item{
+    width: 25%;
+    background-color: rgb(213, 233, 251);
+}
+.item1{
+    width: 50%;
+    background-color: rgb(229, 241, 241);
+    padding-left: 5px;
+}
+h1{
+    text-align: center;
+}

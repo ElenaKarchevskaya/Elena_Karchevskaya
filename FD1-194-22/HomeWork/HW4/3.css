@@ -1,0 +1,26 @@
+.flexbox{
+    display: flex;
+    width: 100%;
+    padding-top: 20px;
+}
+.item{
+    width: 50%;
+    text-align: center;
+    background-color: #ca0000;
+    padding: 10px 0px 10px 0px;
+}
+.item1{
+    width: 50%;
+    text-align: center;
+    background-color: #B0e000;
+    padding: 10px 0px 10px 0px;
+}
+h1{
+    text-align: center;
+}
+.flexbox1{
+    display: flex;
+    width: 100%;
+    padding-top: 20px;
+}
+

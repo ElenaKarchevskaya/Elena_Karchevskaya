@@ -1,0 +1,53 @@
+div{
+    background-image: url(img/mario.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+.z{
+    background-position: 6px -44px;
+}
+.x{
+    background-position: 1px -89px;
+}
+.c{
+    background-position: 1px -173px;
+}
+.v{
+    background-position: -8px -811px;
+}
+.b{
+    background-position: 1px -89px;
+}
+
+p{
+    background-image: url(img/mario.png);
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+.q{
+    background-position: 6px -44px;
+}
+.w{
+    background-position: 1px -89px;
+    position: relative;
+    right: 23px;
+}
+.e{
+    background-position: 1px -173px;
+    position: relative;
+    right: 52px;
+}
+.r{
+    background-position: -10px -811px;
+    position: relative;
+    right: 80px;
+}
+.t{
+    background-position: 1px -89px;
+    position: relative;
+    right: 108px;
+}

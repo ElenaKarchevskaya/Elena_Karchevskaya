@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, h3{
+            text-align: center;
+        }
+        .flexbox{
+            display: flex;
+            width: 100%;
+        }
+        .item{
+            width: 30%;
+            text-align: center;
+        }
+        .item1{
+            width: 70%;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AREA</h1>
+    <p>Тег <strong>area</strong> определяет активные области изображения, которые являются ссылками.</p>
+    <p>Рисунок с привязанными к нему активными областями называется в совокупности картой-изображением. Такая карта по внешнему виду ничем не отличается от обычного изображения, но при этом оно может быть разбито на невидимые зоны разной формы, где каждая из областей служит ссылкой.
+       Элемент area задаёт форму области, её размеры, устанавливает адрес документа, на который следует сделать ссылку.
+       area всегда располагается в контейнере <strong>map</strong>, который связывает координаты областей с изображением.
+    </p>
+    <p>Несколько областей могут перекрывать друг друга, сверху будет та, которая в коде HTML располагается выше.</p>
+    <h3>Значения</h3>
+    <p>Набор координат определяется формой «горячей области», которая задается атрибутом shape. 
+       Отсчёт координат обычно ведётся от левого верхнего угла изображения и указывается в пикселях.
+    </p>
+    <p>Для прямоугольника (shape="rect") определяется четыре координаты — X1, Y1, X2, Y2, как показано на рис1.    </p>
+        <img src="img/arearect.png" alt="рис1">
+    <p>Для окружности (shape="circle") определяется три координаты — координаты центра окружности (X, Y) и ее радиус (R), как показано на рис. 2.</p>
+        <img src="img/areacircle.png" alt="рис2">
+    <p>Для полигона (многоугольника) (shape="poly") последовательно указываются координаты каждой вершины (X1, Y1, X2, Y2, :), как показано на рис. 3.</p>
+        <img src="img/areapoly.png" alt="рис3">
+        <hr>
+    <h1><em> Как это работает</em></h1>
+    <div class="flexbox">
+        <div class="item">
+            <img src="img/area.png" alt="рис 1" usemap="#navigashion">
+            <map name="navigashion">
+                <area shape="rect" coords="255, 6, 350, 35" href="https://www.mozilla.org/ru/" target="_blank" alt="mozilla">
+                <area shape="circle" coords="179, 189, 90" href="https://developer.mozilla.org/ru/" target="_blank" alt="developer.mozilla">
+                <area shape="poly" coords="186,20,336,130,313,140,185,50" href="https://developer.mozilla.org/ru/docs/Web/Guide/Graphics" target="_blank" alt="Graphics">
+                <area shape="poly" coords="314,151,342,146,286,321,266,301" href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" alt="HTML">
+                <area shape="poly" coords="102,304,255,305,274,330,86,329" href="https://developer.mozilla.org/ru/docs/Web/JavaScript" target="_blank" alt="JS">
+                <area shape="poly" coords="16,140,47,152,94,297,75,322" href="https://developer.mozilla.org/ru/docs/Web/API" target="_blank" alt="Web APIs">
+                <area shape="poly" coords="21,131,173,19,175,50,50,141" href="https://developer.mozilla.org/ru/docs/Web/CSS" target="_blank" alt="CSS">
+            </map>
+        </div>
+        <div class="item1">
+           &#8249;img src="img/area.png" alt="рис 1" usemap="#navigashion"&rsaquo; <br>
+           &#8249;map name="navigashion"&rsaquo; <br>
+           &nbsp;&nbsp;&nbsp;&#8249;area shape="rect" coords="255, 6, 350, 35" href="https://www.mozilla.org/ru/" target="_blank" alt="mozilla"&rsaquo; <br>
+           &nbsp;&nbsp;&nbsp;&#8249;area shape="circle" coords="179, 189, 90" href="https://developer.mozilla.org/ru/" target="_blank" alt="developer.mozilla"&rsaquo; <br>
+           &nbsp;&nbsp;&nbsp;&#8249;area shape="poly" coords="186,20,336,130,313,140,185,50" href="https://developer.mozilla.org/ru/docs/Web/Guide/Graphics" target="_blank" alt="Graphics"&rsaquo; <br>
+           &nbsp;&nbsp;&nbsp;&#8249;area shape="poly" coords="314,151,342,146,286,321,266,301" href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" alt="HTML"&rsaquo; <br>
+           &nbsp;&nbsp;&nbsp;&#8249;area shape="poly" coords="102,304,255,305,274,330,86,329" href="https://developer.mozilla.org/ru/docs/Web/JavaScript" target="_blank" alt="JS"&rsaquo; <br>
+           &nbsp;&nbsp;&nbsp;&#8249;area shape="poly" coords="16,140,47,152,94,297,75,322" href="https://developer.mozilla.org/ru/docs/Web/API" target="_blank" alt="Web APIs"&rsaquo; <br>
+           &nbsp;&nbsp;&nbsp;&#8249;area shape="poly" coords="21,131,173,19,175,50,50,141" href="https://developer.mozilla.org/ru/docs/Web/CSS" target="_blank" alt="CSS"&rsaquo; <br>
+           &#8249;/map&rsaquo;
+        </div>
+    </div>    
+</body>
+</html>

@@ -6,82 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .coll{
-            background-color: #d3a2dc;
-        }
-        .col1{
-            float: left;
-            width: 20%;
-        }
-        .col11{
-            background:
-            url(img/ball3.png) no-repeat top left,
-            url(img/ball3.png) no-repeat bottom left, 
-            url(img/ball3.png) no-repeat top right,
-            url(img/ball3.png) no-repeat bottom right;
-        }
-        .col3{
-            background-color: #c17576;
-            margin-left: 20%;
-            margin-right: 200px;
-        }
-        .col33{
-            background:
-            url(img/ball3.png) no-repeat left top,
-            url(img/ball3.png) no-repeat left bottom, 
-            url(img/ball3.png) no-repeat right top,
-            url(img/ball3.png) no-repeat right bottom;
-        }
-        .clear{
-            clear: both;
-        }
-        .col2{
-            float: right;
-            width: 200px;
-        }
-        .col22{
-            background:
-            url(img/ball3.png) no-repeat left top,
-            url(img/ball3.png) no-repeat left bottom, 
-            url(img/ball3.png) no-repeat right top,
-            url(img/ball3.png) no-repeat right bottom;
-        }
-        
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.column1{
+    min-width: 20%;
+    max-width: 20%;
+    background: url(img/ball3.png) no-repeat top left, url(img/ball3.png) no-repeat bottom left, url(img/ball3.png) no-repeat top right, url(img/ball3.png) no-repeat bottom right, #6daeae;
+   
+}
+
+.column2{
+    background: url(img/ball3.png) no-repeat top left, url(img/ball3.png) no-repeat bottom left, url(img/ball3.png) no-repeat top right, url(img/ball3.png) no-repeat bottom right, #c17576;
+   
+}
+
+.column3{
+    min-width: 200px;
+    max-width: 200px;
+    background: url(img/ball3.png) no-repeat top left, url(img/ball3.png) no-repeat bottom left, url(img/ball3.png) no-repeat top right, url(img/ball3.png) no-repeat bottom right, #d3a2dc;
+   
+}
     </style>
 </head>
 <body>
-    <div>
-        <div>
-            <div class="coll">
-                <div class="col1" style="background: url(img/1.png); background-repeat: no-repeat repeat;">
-                    <div class="col11">При блочной вёрстке не существует прямого способа добиться одинаковой высоты нескольких столбцов (т.е. элементов div). Каждый элемент div имеет высоту, определяемую его содержимым, и не зависящую от высоты других элементов div.
-                        Однако, часто можно сверстать макет так, чтобы визуально столбцы казались имеющими одинаковую высоту.Можно добиться визуально одинаковых столбцов.
-                    </div>
-                </div>
-                <div class="col2">
-                    <div class="col22">При блочной вёрстке не существует прямого способа добиться одинаковой высоты нескольких столбцов (т.е. элементов div). Каждый элемент div имеет высоту, определяемую его содержимым, и не зависящую от высоты других элементов div.
-                        Однако, часто можно сверстать макет так, чтобы визуально столбцы казались имеющими одинаковую высоту.Можно добиться визуально одинаковых столбцов.
-                        При блочной вёрстке не существует прямого способа добиться одинаковой высоты нескольких столбцов (т.е. элементов div). Каждый элемент div имеет высоту, определяемую его содержимым, и не зависящую от высоты других элементов div.
-                    </div>
-                </div>
-                <div class="col3">
-                    <div class="col33">
-                        При блочной вёрстке не существует прямого способа добиться одинаковой высоты нескольких столбцов (т.е. элементов div). Каждый элемент div имеет высоту, определяемую его содержимым, и не зависящую от высоты других элементов div.
-                        Однако, часто можно сверстать макет так, чтобы визуально столбцы казались имеющими одинаковую высоту.
-                        Можно добиться визуально одинаковых столбцов, используя специально подготовленные фоновые изображения, применяемые к контейнеру, в котором располагаются все столбцы. Т.е. элементы div имеют различную высоту, но не имеют фона; контейнер же как раз имеет такой фон, который совпадает по размеру и поведению с шириной столбцов, поэтому кажется, что столбец имеет ту же высоту что и контейнер.
-                        При блочной вёрстке не существует прямого способа добиться одинаковой высоты нескольких столбцов (т.е. элементов div). Каждый элемент div имеет высоту, определяемую его содержимым, и не зависящую от высоты других элементов div.
-                        Однако, часто можно сверстать макет так, чтобы визуально столбцы казались имеющими одинаковую высоту.Можно добиться визуально одинаковых столбцов.
-                        <div style="clear: both;"></div>
-                    </div>
-                </div>
-            </div>
-            
+    <div class="wrapper">
+        <div class="column1">
+          <p class="column1-p">
+            width 20% width 20% width 20% width 20% width 20% width 20% width 20%
+            width 20% width 20% width 20% width 20% width 20% width 20% width 20%
+            width 20% width 20% width 20% width 20% width 20% width 20% width 20%
+            width 20% width 20% width 20% width 20% width 20% width 20% width 20%
+            width 20% width 20% width 20% width 20% width 20% width 20% width 20%
+            width 20% width 20% width 20% width 20% width 20% width 20% width 20%
+            width 20% width 20% width 20% width 20% width 20% width 20% width 20%
+            width 20% width 20% width 20% width 20% width 20% width 20% width 20%
+          </p>
         </div>
-        
-    </div>
-    
-    
-    
-    
+        <div class="column2">
+          <p class="column2-p">
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content content content
+            content content content content content content
+          </p>
+        </div>
+        <div class="column3">
+          <p class="column3-p">
+            width 200px width 200px width 200px width 200px width 200px width
+            200px width 200px width 200px width 200px width 200px width 200px
+            width 200px width 200px width 200px width 200px width 200px width
+            200px width 200px width 200px width 200px width 200px width 200px
+            width 200px width 200px width 200px width 200px width 200px width
+            200px width 200px width 200px width 200px width 200px width 200px
+            width 200px width 200px width 200px width 200px width 200px width
+            200px width 200px width 200px width 200px width 200px width 200px
+          </p>
+        </div>
+      </div>    
 </body>
 </html>

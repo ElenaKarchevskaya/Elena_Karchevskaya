@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKS</title>
+    <style>
+        ul li{
+           list-style-type: none;
+        }
+        a{
+            color: green;
+        }
+        a:hover{
+            color: red;
+        }
+        /*вариант 1*/
+        .contanier1 li{
+            display: inline;
+        }
+        .contanier1 li::after {
+	        content: "|";
+	        color: red;
+            padding-left: 6px;
+        }
+        .contanier1 li:last-child:after{
+	        display: none;
+        }
+        /*вариант 2*/
+        .contanier2 li{
+            display: inline-block;
+            vertical-align: middle;
+            border-right: 1px solid red;
+            padding: 5px;
+            line-height: 6px;
+        }
+        .contanier2 li:last-child {
+	        border-right: none
+        }
+
+        /*3 вариант*/
+        .contanier3{
+            overflow: hidden;
+            position: fixed; 
+            top: 2%; 
+            width: 100%;
+        }
+        .contanier3 a{
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 9px 9px;
+            border-left: 1px solid red;
+            line-height: 0px;
+        }
+        .contanier3 a:first-child{
+            border-left: none;
+        }
+
+        /*4 вариант*/
+        .contanier4{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .contanier4 > a, .contanier4 > span{
+            display: inline-block;
+        }
+        div > span{
+            margin: 0 10px;
+            color: red;
+        }
+
+        /*5 вариант*/
+        .contanier5 ul{
+            margin-top: -15px;
+            display: table;
+        }
+        .contanier5 li{
+            display: table-cell;
+        }
+        .contanier5 li::after {
+	        content: "|";
+	        color: red;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="contanier4">
+        <a href="">ссылка первая</a>
+        <span>|</span>
+        <a href="">ссылка вторая</a>
+        <span>|</span>
+        <a href="">ссылка третья</a>
+        <span>|</span>
+        <a href="">ссылка четвертая</a>
+        <span>|</span>
+        <a href="">ссылка пятая</a>
+    </div>
+    <div class="contanier1">
+    <ul>
+        <li><a href="">ссылка первая</a></li>
+        <li><a href="">ссылка вторая</a></li>
+        <li><a href="">ссылка третья</a></li>
+        <li><a href="">ссылка четвертая</a></li>
+        <li><a href="">ссылка пятая</a></li>
+    </ul>
+    </div>
+    <div class="contanier2">
+        <ul>
+            <li><a href="">ссылка первая</a></li>
+            <li><a href="">ссылка вторая</a></li>
+            <li><a href="">ссылка третья</a></li>
+            <li><a href="">ссылка четвертая</a></li>
+            <li><a href="">ссылка пятая</a></li>
+        </ul></div>
+    <br>
+    <!--фиксированное меню будет накладываться на другое содержимое. Чтобы исправить это, я добавила margin-top к .contaniary4-->
+    <div class="contanier3">
+        <a href="">ссылка первая</a>
+        <a href="">ссылка вторая</a>
+        <a href="">ссылка третья</a>
+        <a href="">ссылка четвертая</a>
+        <a href="">ссылка пятая</a>
+    </div>
+    <div class="contanier5">
+        <ul>
+            <li><a href="">ссылка первая</a></li>
+            <li><a href="">ссылка вторая</a></li>
+            <li><a href="">ссылка третья</a></li>
+            <li><a href="">ссылка четвертая</a></li>
+            <li><a href="">ссылка пятая</a></li>
+        </ul>
+    </div>
+</body>
+</html>

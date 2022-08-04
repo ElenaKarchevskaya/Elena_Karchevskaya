@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*1*/
+        .b{
+            position: absolute;
+        }
+        .b div{
+            float: right;
+        }
+        /*2*/
+        .m{
+            direction: rtl;
+            padding-top: 100px;
+        }
+        /*3*/
+        .n{
+            transform: scaleX(-1);
+            position: absolute;
+            padding-top: 10px;
+        }
+        .n div{
+            float: left;
+            transform: scaleX(-1);
+        }
+
+
+        .str{
+            display: inline-block;
+            background-image: url("img/star0.png");
+            width: 75px;
+            height: 79px;
+        }
+        .str:hover{
+            background-image: url("img/star1.png");
+            width: 75px;
+            height: 79px;
+        }
+        .str:hover ~ .str{
+            background-image: url("img/star1.png");
+            width: 75px;
+            height: 79px;
+        }
+    </style>
+</head>
+<body>
+    <p>Для того что бы выполнить задачу я решила поменять порядок вывода элементов. <br>
+        1й способ: добавила всем div класса .b - <strong>float: right</strong> <br>
+        2й способ: задала <strong>direction: rtl</strong>  (справа налево) для элемента-обертки, что позволит сменить направление раскладки. <br>
+        3й способ: вложенным элементам задать <strong>float: left;</strong> и затем применить <strong>transform: scaleX(-1)</strong> к ним и их родителю. Задав отрицательные значения будет так, что трансформируемый элемент не масштабируется, а перевернется по горизонтальной оси.
+    </p> 
+    <div class="b">
+        <div class="str"></div>
+        <div class="str"></div>
+        <div class="str"></div>
+        <div class="str"></div>
+        <div class="str"></div>
+    </div>
+    <div class="m">
+        <div class="str"></div>
+        <div class="str"></div>
+        <div class="str"></div>
+        <div class="str"></div>
+        <div class="str"></div>
+    </div>
+    <div class="n">
+        <div class="str"></div>
+        <div class="str"></div>
+        <div class="str"></div>
+        <div class="str"></div>
+        <div class="str"></div>
+    </div>
+    
+</body>
+</html>

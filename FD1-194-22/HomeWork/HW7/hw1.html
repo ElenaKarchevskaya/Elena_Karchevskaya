@@ -49,7 +49,6 @@
         .contanier3 a{
             float: left;
             display: block;
-            text-align: center;
             padding: 9px 9px;
             border-left: 1px solid red;
             line-height: 0px;
@@ -63,7 +62,7 @@
             margin-top: 20px;
             margin-left: 10px;
         }
-        .contanier4 > a, .contanier4 > span{
+        .contanier4 > a .contanier4 > span{
             display: inline-block;
         }
         div > span{
@@ -89,6 +88,7 @@
 </head>
 <body>
     <br>
+    <!--Разделитель задан с помощью дополнительного тега span-->
     <div class="contanier4">
         <a href="">ссылка первая</a>
         <span>|</span>
@@ -100,6 +100,7 @@
         <span>|</span>
         <a href="">ссылка пятая</a>
     </div>
+    <!--Этот вариант мне очень понравился, в стилевых свойствах задан разделитель между ссылками с помощью content, у последнего элемента он отменен-->
     <div class="contanier1">
     <ul>
         <li><a href="">ссылка первая</a></li>
@@ -109,6 +110,7 @@
         <li><a href="">ссылка пятая</a></li>
     </ul>
     </div>
+    <!--Разделитель между ссылками был задан с помощью border-->
     <div class="contanier2">
         <ul>
             <li><a href="">ссылка первая</a></li>
@@ -126,6 +128,7 @@
         <a href="">ссылка четвертая</a>
         <a href="">ссылка пятая</a>
     </div>
+    <!--Здесь попробовала использовать display: table-->
     <div class="contanier5">
         <ul>
             <li><a href="">ссылка первая</a></li>
@@ -135,5 +138,6 @@
             <li><a href="">ссылка пятая</a></li>
         </ul>
     </div>
+    <!--Самый удобный способ для себя я уже указала, на мой взгляд все осталные требуют дополнительное написание лишних тегов, либо достаточно много стилевых (т.е указывать нужно высоту, ширину, отступы, расположения) свойств для того что бы добиться нужного нам результата-->
 </body>
 </html>

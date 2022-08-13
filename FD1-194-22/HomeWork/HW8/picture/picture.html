@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Fira+Sans:wght@400;500;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Fira+Sans:wght@400;500;600&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <div class="nav">
+            <div>In this article</div>
+            <ul>
+                <li><a href="#atr">Атрибуты</a></li>
+                <li><a href="#pr">Примеры</a></li>
+                <li><a href="#br">Браузерная <br>совместимость</a></li>
+            </ul>
+    </div>
+    <div class="content">
+        <h2>Элемент PICTURE</h2>
+        <p>HTML-элемент <span>picture</span> служит контейнером для одного или более элементов <span>source</span> и одного элемента <span>img</span> для обеспечения оптимальной версии изображения для различных размеров экрана. Браузер рассмотрит каждый из дочерних элементов source и выберет один, соответствующий лучшему совпадению; если совпадений среди элементов source найдено не будет, то будет выбран файл, указанный атрибутом <span>src</span> элемента <span>img</span>. Затем выбранное изображение отображается в пространстве, занятом элементом img.</p>
+        <p>Чтобы выбрать оптимальное изображение, user agent анализирует атрибуты <span>srcset,</span> <span>media,</span> и <span>type</span> элемента source и выбирает совместимое изображение, которое наилучшим образом соответствует текущему макету страницы, характеристикам устройства отображения и т. д.</p>
+        <p>Элемент picture часто используют для того, чтобы обеспечить HiDPI (Retina)-версию изображений для дисплеев с высоким разрешением, а также для добавления других форматов изображений, не поддерживаемых всеми браузерами.</p>
+        <h2 id="atr">Атрибуты</h2>
+        <p>Этот элемент содержит только <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">универсальные атрибуты.</a></p>
+        <h2 id="pr">Примеры</h2>
+        <p>Эти примеры демонстрируют влияние различных атрибутов элемента source на выбор изображения, которое будет отображаться при их использовании внутри тега picture.</p>
+        <h3>Атрибут media</h3>
+        <p>Атрибут media позволяет определить медиавыражение, которое веб-браузер будет анализировать для выбора элемента source. Если медиавыражение определяется как ложное (false), то элемент source пропускается.</p>
+        
+        <p>Картинка меньшего размера будет загружаться только в том случае,
+            если ширина экрана будет <strong style="color: #ff6d10;">меньше 719px.</strong>
+        </p>
+        <picture>
+            <source srcset="mobile.jpg" media="(max-width: 719px)">
+            <img src="header.jpg" alt="">
+        </picture>
+        <h3>Атрибут type</h3>
+        <p>Атрибут type позволяет вам обозначить MIME-тип данных, указанных в атрибуте srcset элемента source. Если браузер не поддерживает данный тип, то элемент source опускается.</p>
+        <p>Картинка загружается в формате <strong style="color: #ff6d10;">svg</strong>, но если не поддерживается этот формат, то загрузится <strong style="color: #ff6d10;">png</strong> картинка.</p>
+        <!--картинка будет загружаться в формате svg,
+            но если не поддерживается этот формат, 
+            то загрузится png картинка-->
+        <picture>
+            <source srcset="mobile.svg" type="image/svg">
+            <img src="mobile.jpg" alt="">
+        </picture>
+        
+        <h3 id="br">Браузерная совместимость</h3>
+        <img src="tabl.png" width="500px" height="200px" alt="">
+    </div>
+</body>
+</html>

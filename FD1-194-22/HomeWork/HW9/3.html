@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKET_ABS</title>
+    <style>
+        .img-center{
+            position: relative;
+            margin: 0 auto;
+            width: 410px;
+            height: 440px;
+        }
+        .img-center img:nth-child(1){
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+        .img-center img:nth-child(1):hover, 
+        .img-center img:nth-child(2):hover, 
+        .img-center img:nth-child(4):hover{
+            z-index: 2;
+        }
+        .img-center img:nth-child(2){
+            position: absolute;
+            right: 0;
+        }
+        .img-center img:nth-child(3){
+            position: absolute;
+            bottom: 100px;
+            left: 85px;
+            z-index: 1;
+        }
+        .img-center img:nth-child(4){
+            position: absolute;
+            left: 110px;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!--<figure>
+        <figcaption>У любого тега может быть указан HTML-атрибут aria-controls, он указывает идентификатор элемента, которым он управляет или с которым функционально связан иным образом. Например, в теге, выглядящем как закладка, атрибут aria-controls может содержать идентификатор того тега-контейнера, который будет отображён при клике по закладке.
+                У любого тега может быть указан HTML-атрибут aria-labelledby, он указывает идентификатор элемента, который является меткой для данного. Например, в теге-контейнере атрибут aria-labelledby может содержать идентификатор тега-закладки, отображающего данный контейнер.
+        </figcaption>
+        <div class="relative">
+            <div class="relative1">
+                <img src="img/Man-and-woman.png" alt="">
+                <img src="img/No_smoking.png" alt="">
+                <img src="img/biohazard.png" alt="">
+                <img src="img/Yin_and_Yang.png" alt="">
+            </div>
+        </div>  
+        <figcaption>У любого тега может быть указан HTML-атрибут aria-controls, он указывает идентификатор элемента, которым он управляет или с которым функционально связан иным образом. Например, в теге, выглядящем как закладка, атрибут aria-controls может содержать идентификатор того тега-контейнера, который будет отображён при клике по закладке.
+                    У любого тега может быть указан HTML-атрибут aria-labelledby, он указывает идентификатор элемента, который является меткой для данного. Например, в теге-контейнере атрибут aria-labelledby может содержать идентификатор тега-закладки, отображающего данный контейнер.
+        </figcaption>
+    </figure>-->
+    <div>
+        <div>У любого тега может быть указан HTML-атрибут aria-controls, он указывает идентификатор элемента, которым он управляет или с которым функционально связан иным образом. Например, в теге, выглядящем как закладка, атрибут aria-controls может содержать идентификатор того тега-контейнера, который будет отображён при клике по закладке.
+            У любого тега может быть указан HTML-атрибут aria-labelledby, он указывает идентификатор элемента, который является меткой для данного. Например, в теге-контейнере атрибут aria-labelledby может содержать идентификатор тега-закладки, отображающего данный контейнер.
+        </div>
+        <div class="img-center">
+            <img src="img/biohazard.png" alt="">
+            <img src="img/Man-and-woman.png" alt="">
+            <img src="img/No_smoking.png" alt="">
+            <img src="img/Yin_and_Yang.png" alt="">
+        </div>
+        <div>У любого тега может быть указан HTML-атрибут aria-controls, он указывает идентификатор элемента, которым он управляет или с которым функционально связан иным образом. Например, в теге, выглядящем как закладка, атрибут aria-controls может содержать идентификатор того тега-контейнера, который будет отображён при клике по закладке.
+            У любого тега может быть указан HTML-атрибут aria-labelledby, он указывает идентификатор элемента, который является меткой для данного. Например, в теге-контейнере атрибут aria-labelledby может содержать идентификатор тега-закладки, отображающего данный контейнер.
+        </div>
+    </div>
+</body>
+</html>

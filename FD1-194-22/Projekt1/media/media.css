@@ -1,0 +1,394 @@
+@media all and (max-width: 1296px){
+    .wrapper{
+        width: 970px;
+    }
+    .header-nav ul li:first-child {
+        padding-left: 50px;
+    }
+    .header-nav ul li{
+        padding-left: 17px;
+    }
+    .header-tel div{
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .header-tel div img{
+        padding-left: 50px;
+    }
+    .header-icons a{
+        padding-left: 0;
+        font-size: 14px;
+    }
+    .header-icons{
+        width: 270px;
+    }
+    .content-menu img:first-child{
+        padding-left: 49px;
+    }
+    .content-menu{
+        width: 224px;
+        margin-right: 0;
+    }
+    .content-menu img:last-child{
+        padding-top: 17px;
+    }
+    .content-search .search {
+        width: 535px;
+    }
+    .content-basket{
+        padding-left: 10px;
+    }
+    .footer ul li:first-child {
+        padding-left: 95px;
+    }
+    .footer {
+        padding-top: 24px;
+        margin-bottom: 24px;
+    }
+    .podheader{
+        width: 970px;
+    }
+    .choice {
+        height: 74px;
+    }
+    .choice ul {
+        padding-top: 25px;
+        padding-left: 95px;
+    }
+    .choice ul li:first-child, .choice ul li{
+        padding-right: 20px;
+    }
+    .nav-menu {
+        padding-top: 37px;
+    }
+    .product .box {
+        width: 287px;
+        height: 372px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        margin-left: 27px;
+        margin-top: 8px;
+        float: left;
+    }
+    .NE-sale{
+        overflow: hidden;
+        width: 970px;
+    }
+    .box .left {
+        float: none;
+        margin-top: 9px;
+        margin-left: 36px;
+        margin-bottom: 3px;
+    }
+    .box .header{
+        width: 247px;
+    }
+    .box .header h3 {
+        display: inline;
+        font-family: 'Noto Sans';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+    }
+    .box .header div {
+        margin: 0;
+    }
+    .box .header div img{
+        padding-right: 10px;
+        margin-top: 5px;
+    }
+    .box .header p:nth-child(5){
+        display: none;
+    }
+    .box .header div:last-child {
+        float: right;
+        font-family: 'Noto Sans';
+        font-size: 11px;
+        line-height: 17px;
+        margin-top: -56px;
+        margin-right: 6px;
+    }
+    .box .header div:last-child img{
+        padding-right: 5px;
+        vertical-align: bottom;
+    }
+    .box .header p{
+        font-size: 10px;
+        line-height: 11px;
+    }
+    .box .left-icon {
+        width: 50px;
+        margin-top: -285px;
+        margin-right: 0px;
+    }
+    .box .podhedar-right{
+        margin-top: 25px;
+    }
+    .box .podhedar-right p {
+        padding-right: 9px;
+        font-weight: 500;
+        font-size: 23px;
+        float: right;
+    }
+    .box .podhedar-right button {
+        font-weight: 500;
+        width: 146px;
+        height: 42px;
+        font-size: 14;
+        line-height: 16px;
+        margin-top: 1px;
+        margin-right: 18px;
+    }
+    .more div{
+        margin-top: 413px;
+    }
+    .more button{
+        margin-left: 438px;
+        margin-top: 20px;
+    }
+    .more p{
+        margin-top: 6px;
+        padding-left: 59px;
+    }
+    .prise{
+        height: 1654px;
+    }
+    .footer-subscribe{
+        padding-top: 37px;
+    }
+    .footer-subscribe ul:first-child{
+        padding-left: 70px;
+    }
+    .footer-subscribe ul:nth-child(2) li {
+        padding-left: 72px;
+    }
+    .footer-subscribe ul:nth-child(3) li {
+        padding-left: 60px;
+    }
+    .footer-subscribe > ul li{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .footer-subscribe .apps{
+        margin-right: 56px;
+    }
+    .social-networks {
+        margin-top: 20px;
+    }
+    .social-networks li:first-child {
+        padding-left: 463px;
+    }
+    .footer-subscribe p{
+        margin-top: 2px;
+        margin-left: 53px;
+    }
+    .footer-subscribe {
+        height: 319px;
+    }
+}
+@media all and (max-width: 970px){
+    .wrapper{
+        width: 375px;
+    }
+    .header-nav {
+        display: none;
+    }
+    .header-tel {
+        display: none;
+    }
+    .header-icons{
+        display: none;
+    }
+    .content-menu{
+        clear: none;
+    }
+    .content-menu img:first-child{
+        padding-top: 98px;
+        padding-left: 21px;
+    }
+    .content-menu img:last-child {
+        padding-top: 2px;
+        padding-left: -27px;
+        margin-left: 58px;
+    }.content-search .search {
+        margin-top: -75px;
+        width: 282px;
+        height: 35px;
+        float: right;
+        padding-bottom: -12px;
+        margin-right: 29px;
+    }
+    .content-basket button{
+        display: none;
+    }
+    .footer ul li {
+        margin-left: 20px;
+        display: block;
+    }
+    .footer ul li a{
+        font-weight: 400;
+        font-size: 13px;
+
+    }
+    .footer ul li:first-child {
+        padding-left: 79px;
+        margin-bottom: 11px;
+    }
+    .footer ul li:last-child{
+        padding-bottom: 8px;
+    }
+    .footer {
+        padding-top: 7px;
+        border: 1px solid green;
+    }
+    .podheader {
+        width: 375px;
+        height: 90px;
+        background: url(../img/mobile.png);
+        background-size: 250px;
+        border: 1px solid green;
+        border-radius: 8px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: -41px;
+    }
+    .podheader .sale {
+        width: 99px;
+        height: 50px;
+        margin-right: 137px;
+        margin-top: 16px;
+        background: none;
+    }
+    .podheader .sale p{
+        display: none;
+    }
+    .sale h2{
+        font-size: 12px;
+    }
+    .choice{
+        height: 0;
+    }
+    .choice ul{
+        display: none;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .filter-left h3{
+        display: none;
+    }
+    .filter-left p{
+        display: none;
+    }
+    .box .left-icon img:last-child{
+        display: none;
+    }
+    .filter-right{
+        padding-right: 10px;
+    }
+    .prise {
+        height: 3045px;
+    }
+    .product .box{
+        margin-left: 46px;
+    }
+    .box .header div:last-child{
+        display: none;
+    }
+    .box .podhedar-right {
+        margin-top: 7px;
+    }
+    .NE-sale{
+        background: none;
+        width: 375px;
+        height: 150px;
+        background-image: url(../img/NEmobile.png);
+        background-size: 375px;
+    }
+    .NE-sale h3 {
+        font-family: 'Noto Sans';
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 28px;
+        padding-top: 19px;
+        padding-left: 166px;
+        color: #290d03;
+    }
+    .NE-sale button{
+        width: 130px;
+        margin-left: 167px;
+        font-size: 14px;
+        line-height: 19px;
+        background-color: #f4f2f3;
+        border-color: #fef6ce;
+    }
+    .footer-subscribe ul li:not(li:first-child) {
+        display: none;
+    }
+    .more div{
+        display: none;
+    }
+    .more p{
+        display: none;
+    }
+    .more button {
+        margin-left: 110px;
+        margin-top: -1px;
+    }
+    .footer-subscribe{
+        padding-top: 0px;
+        background-color: #FFFFFF;
+    }
+    .footer-subscribe > ul{
+        float: none;
+    }
+    .footer-subscribe ul:nth-child(1) li,
+    .footer-subscribe ul:nth-child(2) li,
+    .footer-subscribe ul:nth-child(3) li{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 2px;
+        border: 1px solid grey;
+        background-color: #F0F0F0;
+        background-image: url(../img/navmobile.svg);
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+    .footer-subscribe .apps div:first-child{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 2px;
+        border: 1px solid grey;
+        background-color: #F0F0F0;
+        width: 375px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 600;
+        margin-right: -56px;
+        background-image: url(../img/navmobile.svg);
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+    .footer-subscribe .apps img:first-of-type {
+        margin-left: 118px;
+    }
+    .footer-subscribe .apps div:last-child {
+        margin-left: 128px;
+        border: 1px solid black;
+    }
+    .footer-subscribe .social-networks{
+        display: none;
+    } 
+    .footer-subscribe p {
+        margin-top: 2px;
+        margin-left: 6px;
+    }
+    
+    
+    
+}

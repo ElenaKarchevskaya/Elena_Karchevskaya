@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .one{
+      float: left;
+      width: 218px;
+      padding: 10px;
+      padding-left: 6px;
+    }
+    .two{
+      padding: 5px;
+    }
+    .three{
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 250px;
+    }
+    .three input{
+      width: 100%;
+    }
+    .three1{
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 1px;
+    }
+    .three1 textarea{
+      width: 100%;
+    }
+    
+    p{
+      display: inline-block;
+      margin: 14px;
+      margin-right: 185px;
+    }
+    label{
+      padding: 7px;
+    }
+    label select{
+      margin-left: 185px;
+    }
+    .checkbox{
+      margin-left: 72px;
+    }
+    h3{
+      margin-left: 7px;
+    }
+    select{
+      margin-left: 177px;
+    }
+    .one1{
+      display: inline-block;
+      padding: 7px;
+    }
+    .radio{
+      margin-left: 150px;
+    }
+    @media all and (max-width: 700px){
+      .three{
+        margin-left: 0px;
+        padding-left: 0;
+      }
+      .one1{
+        display: block;
+      }
+      select{
+        margin-left: 7px;
+      }
+      .radio{
+        margin-left: 7px;
+      }
+      .checkbox input{
+        margin-left: 4px;
+      }
+    .checkbox{
+      margin-left: 4px;
+    }
+    }
+  </style>
+</head>
+<body>
+  <h3>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</h3>
+    <form action="" method="post">
+      <div class="one">Название статьи:</div>
+      <div class="two">
+        <div class="three"><input type="text"></div>
+        <div style="clear: both;"></div>
+      </div>
+      <div class="one1">Рубрика:</div>
+        <select>
+             <option value="7">компьютерная техника</option>
+             <option value="5">графика и дизайн</option>
+             <option value="8" selected>программирование
+        </select>
+      <br>
+<br>
+       <div class="one1">Публикация:</div>
+       <input type="radio" name="answer" value="1" class="radio">да
+       <input type="radio" name="answer" value="2">нет
+       <input type="radio" name="answer" value="3">воздержался<br>
+       <br>
+       <label for="">Разрешить комментарии:
+        <input type="checkbox" name="onlynew" checked class="checkbox"><br>
+       </label><br>
+       <label for=""> Ответ:</label><br>
+       <div class="two">
+        <div class="three1"><textarea name="mytext"></textarea></div>
+       </div>
+       <input type="submit" value="Отправить" style="margin-left: 6px;">
+    </form>
+    
+  
+</body>
+</html>

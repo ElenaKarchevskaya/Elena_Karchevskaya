@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MAKET_FLEX</title>
     <style>
         .flex{
             display: flex;
@@ -18,9 +18,9 @@
         }
         .flexbox{
             display: flex;
+            background: url(../HW6/img/ball.png) repeat-y right;
         }
         .box1{
-            width: 150px;
             padding: 10px;
             background-color: blanchedalmond;
         }
@@ -28,6 +28,53 @@
             text-align: center;
             font-weight: 600;
         }
+        .box2{
+            padding: 20px;
+        }
+        .box2 h3{
+            text-align: center;
+        }
+        img{
+            margin-right: 15px;
+            float: left;
+        }
+
+        @media all and (max-width: 540px){
+            .header{
+                display: none;
+            }
+            .flexbox{
+                flex-direction: column-reverse;
+                background: none;
+            }
+            .box2{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0;
+            }
+            img{
+                float: none;
+            }
+            .box1{
+                background: none;
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+            ul{
+                padding: 0;
+            }
+            ul li{
+                list-style-type: none;
+                display: inline;
+            }
+            .box1 p{
+                padding: 0;
+                margin-bottom: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -54,7 +101,7 @@
             </div>
             <div class="box2">
                 <h3>Футбол</h3>
-                <img src="../HomeWork/HW6/img/people.png" style="float: left;" alt="people">
+                <img src="../HW6/img/people.png" alt="people">
                 <p>
                     Футбол - командный вид спорта, в котором целью является забить мяч в ворота соперника ногами
                     или другими частями теле (кроме рук) большее количество раз, чем команда соперникаю.

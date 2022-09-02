@@ -6,18 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        a::before{
-            content: url(../HW7/img/extref.png);
+        .wrap{
+            display: flex;
         }
-        a:last-child::before{
-            content: none;
-            color: blue;
-        }
+        .small {width: 140px;
+        height: 140px;
+    background-color: aqua;
+margin: 10px;}
+    label{
+        position: relative;
+    }
+    .check{
+        position: absolute;
+        top: 150px;
+        left: 800px;
+    }
+        
+        .check:checked ~ .small {transform: scale(1.2);}
+
+        
+        .small1 {width: 140px;
+        height: 140px;
+    background-color: aqua;
+margin: 10px;}
+    label{
+        position: relative;
+    }
+    .check1{
+        position: absolute;
+        top: 150px;
+    }
+        
+        .check1:checked ~ .small1 {transform: scale(1.2);}
     </style>
 </head>
 <body>
-        <a href="">1mn.</a>
-        <a href="">2,knk.</a>
-        <a href="">356it7</a>
+    <div class="wrap">
+        <label>
+        <input class="check" type="radio" name="dzen" checked>
+        <div class="small"></div>
+      </label>
+    
+      
+      <label>
+        <input class="check1" type="radio" name="dzen">
+        <div class="small1"></div>
+      </label>
+    </div>
+        
 </body>
 </html>

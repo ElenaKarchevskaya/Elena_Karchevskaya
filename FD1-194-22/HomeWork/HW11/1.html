@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anketa_if.html</title>
+</head>
+<body>
+    <script>
+        var surname=prompt('Фамилия');
+        console.log (surname);
+        
+        var name=prompt('Имя');
+        console.log (name);
+        
+        var fathername=prompt('Отчество');
+        console.log (fathername);
+        
+        var ageStr=prompt('Возраст');
+        var age=parseFloat(ageStr)
+        if(age!=ageStr){
+            alert('некорректные данные')
+            var ageStr=prompt('Возраст');
+            var age=parseFloat(ageStr)
+        }
+        console.log(age);
+
+        var  ageDate = age * 365 ;
+        var  year = age + 5 ;
+        
+        
+        var gender=confirm('Вы мужчина?');
+        if(gender==true){
+            gender=' мужской'}
+        else
+            gender=' женский'
+
+        var old = 65;    
+        if(gender==true && age>=65){
+            old=' Да'}
+        else
+            old=' Нет';
+        if(gender!=true && age>=60){
+            old=' Да'}
+        else
+            old=' Нет'
+        alert('Ваше ФИО: ' + surname + ' ' + name + ' ' + fathername + '\n\r' + 'Ваш возраст в годах: ' + ageStr + '\n\r' + 'Ваш возраст в днях:' + ' ' + ageDate + '\n\r' + 'Через 5 лет вам будет:' + ' ' + year + '\n\r' + 'Ваш пол:' + '' + gender + '\n\r' + 'Вы на пенсии:' + ' ' + old);
+    
+    </script>
+</body>
+</html>

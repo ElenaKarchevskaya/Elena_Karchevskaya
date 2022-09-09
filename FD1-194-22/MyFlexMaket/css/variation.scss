@@ -28,3 +28,32 @@ $fz64: 64px;
 
 //contaniers
 $xl: 1296px;
+
+//@media
+//1295px
+//1024px
+//767px
+//576px
+$breakpoint_xxl: 1297px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 576px;
+
+@mixin breakpoint($point) {
+    @if $point == lg {
+        @media (max-width: 1295px){@content;}
+    }
+
+    @else if $point == xl {
+        @media (max-width: 1024px){@content;}
+    }
+
+    @else if $point == md {
+        @media (max-width: 757px){@content;}
+    }
+
+    @else if $point == sm {
+        @media (max-width: 476px){@content;}
+    }
+    
+}

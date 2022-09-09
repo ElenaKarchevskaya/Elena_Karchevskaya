@@ -6,53 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .wrap{
-            display: flex;
+       /* .slider{
+            position: relative;
         }
-        .small {width: 140px;
-        height: 140px;
-    background-color: aqua;
-margin: 10px;}
-    label{
-        position: relative;
-    }
-    .check{
-        position: absolute;
-        top: 150px;
-        left: 800px;
-    }
+        .slider-pagination label{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(20, 23, 23);
+            cursor: pointer;
+        }*/
+        .page1{
+            position: absolute;
+            left: 45%;
+            top: 250px;
+        }
         
-        .check:checked ~ .small {transform: scale(1.2);}
-
-        
-        .small1 {width: 140px;
-        height: 140px;
-    background-color: aqua;
-margin: 10px;}
-    label{
-        position: relative;
-    }
-    .check1{
-        position: absolute;
-        top: 150px;
-    }
-        
-        .check1:checked ~ .small1 {transform: scale(1.2);}
+        .page2{
+            position: absolute;
+            left: 50%;
+            top: 250px;
+        }
+        .page3{
+            position: absolute;
+            left: 55%;
+            top: 250px;
+        }
+        /*.flex{
+            display: flex;
+            justify-content: space-around;
+        }
+        .z, .x, .c{
+            width: 450px;
+            height: 200px;
+            background-color: aqua;
+        }*/
+        .slide-radio1:checked~.slider-pagination .page1,
+        .slide-radio2:checked~.slider-pagination .page2,
+        .slide-radio3:checked~.slider-pagination .page3{
+            background: rgb(146, 29, 29)
+        }
+        .slide-radio1:checked ~.flex .z,
+        .slide-radio2:checked~.flex .x,
+        .slide-radio3:checked~.flex .c{
+        transform: scale(1.2);
+        }
+     /* input{
+        opacity: 0;
+      }*/
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <label>
-        <input class="check" type="radio" name="dzen" checked>
-        <div class="small"></div>
-      </label>
-    
-      
-      <label>
-        <input class="check1" type="radio" name="dzen">
-        <div class="small1"></div>
-      </label>
+    <div class="slider">
+        <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
+        <input type="radio" name="slider" class="slide-radio2" id="slider_2">
+        <input type="radio" name="slider" class="slide-radio3" id="slider_3">
+        <div class="slider-pagination">
+          <label for="slider_1" class="page1"></label>
+          <label for="slider_2" class="page2"></label>
+          <label for="slider_3" class="page3"></label>
+        </div>
+        <div class="flex">
+            <div class="z"></div>
+            <div class="x"></div>
+            <div class="c"></div>
+        </div>
     </div>
-        
 </body>
 </html>

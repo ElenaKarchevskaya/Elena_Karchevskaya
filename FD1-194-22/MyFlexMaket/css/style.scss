@@ -3,6 +3,20 @@
 @import "mix.scss";
 @import "originally.scss";
 
+
+.contanier{
+    @include breakpoint (lg){
+        width: 967px;
+    }
+    
+    @include breakpoint (xl){
+        width: 757px;
+    }
+    @include breakpoint (md){
+        width: 390px;
+    }
+    
+}
 .header{
     color: $white;
     padding-top: 30px;
@@ -11,19 +25,48 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include breakpoint (xl){
+            flex-direction: column;
+        }
+        img{
+            @include breakpoint (xl){
+                width: 100px;
+            }}
     }
     ul{
         display: flex;
+        @include breakpoint (xl){
+            padding-top: 26px;
+        }
+        @include breakpoint (md){
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-left: 31px;
+        }
 
         li{
             margin-right: 50px;
             font-family: $Montserrat;
             font-weight: $light;
             font-size: $fz14;
-
+            @include breakpoint (lg){
+                margin-right: 30px;
+            }
+            @include breakpoint (xl){
+                font-size: 16px;
+                margin-right: 20px;
+            }
+            @include breakpoint (md){
+                margin-bottom: 10px;
+            }
+         
             &:last-child{
                 margin-right: 0px;
             }
+        }
+        li:hover{
+            color: $blue;
         }
     }
     div button{
@@ -36,39 +79,72 @@
         font-family: $Montserrat;
         font-weight: $bold;
         font-size: $fz13;
+        @include breakpoint (xl){
+            display: none;
+        }
     }
 }
+
 .header-item{
     color: $white;
     margin-top: 60px;
-
-    .header-item_contanier{
+    @include breakpoint (xl){
+        margin-top: 40px;
+    }
+    .contanier{
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-    }
-    .header-item_contanier p:nth-child(2){
-        position: absolute;
-        top: 136px;
-        font-family: $ElMessiri;
-        font-weight: $superbold;
-        font-size: $fz24;
-    }
-    
-    .header-item_contanier p:last-child{
-        position: absolute;
-        top: 210px;
-        font-family: $ElMessiri;
-        font-weight: $superbold;
-        font-size: $fz64;
-        text-align: center;
+
+        img{
+            width: 100%;
+        }
+
+        p:nth-child(2){
+            position: absolute;
+            top: 136px;
+            font-family: $ElMessiri;
+            font-weight: $superbold;
+            font-size: $fz24;
+            @include breakpoint (lg){
+                top: 100px;
+            }
+            @include breakpoint (xl){
+                top: 65px;
+            }
+            @include breakpoint (md){
+                display: none;
+            }
+        }
+        p:last-child{
+            position: absolute;
+            top: 210px;
+            font-family: $ElMessiri;
+            font-weight: $superbold;
+            font-size: $fz64;
+            text-align: center;
+            @include breakpoint (lg){
+               top: 200px;
+               font-weight: $bold;
+               font-size: $fz42;
+            }
+            @include breakpoint (xl){
+                top: 122px;
+            }
+            @include breakpoint (md){
+                top: 35px;
+            }
+        }
     }
 }
 
 .prise{
     color: $white;
     padding-top: 150px;
+    @include breakpoint (lg){
+        padding-top: 50px;
+    }
 
     .text-list{
         display: flex;
@@ -76,12 +152,18 @@
         font-family: $ElMessiri;
         font-weight: $superbold;
         font-size: $fz42;
+        @include breakpoint (xl){
+            font-size: 38px;
+        }
 
         .list, .list1{
             width: 28px;
             height: 14px;
             background: $blue;
             border-radius: 7px;
+            @include breakpoint (md){
+                display: none;
+            }
         }
         .list{
             transform: skew(53deg);
@@ -101,22 +183,63 @@
         font-weight: $superbold;
         font-size: $fz24;
         margin-top: 100px;
+        @include breakpoint (lg){
+            margin-top: 50px;
+        }
+        @include breakpoint (xl){
+            flex-direction: column;
+            align-items: center;
+        }
+        @include breakpoint (md){
+            background: url(../img/uderwother1.png);
+            width: 370px;
+            border-radius: 10px;
+        }
 
         .item-left{
             position: relative;
             width: 416px;
             height: 540px;
             background-image: url(../img/uderwother1.png);
+            @include breakpoint (lg){
+                width: 300px;
+                height: 540px;
+                border-radius: 10px;
+            }
+            @include breakpoint (xl){
+                height: 259px;
+                margin-bottom: 23px;
+            }
+            @include breakpoint (md){
+                background-image: none;
+                margin-bottom: 0px;
+            }
 
             p{
                 position: absolute;
                 bottom: 50px;
                 left: 50px;
+                @include breakpoint (xl){
+                    left: 18px;
+                    top: 47px;
+                }
             }
+            p:hover{
+                @include breakpoint (xl){
+                    color: $darkblue;
+                    cursor: pointer;
+                }
+                @include breakpoint (md){
+                    color: $darkblue;
+                    cursor: default;
+                }}
         }
 
         .flex-items{
             display: flex;
+            @include breakpoint (md){
+                margin-top: -177px;
+            }
             
             .item{
 
@@ -126,6 +249,17 @@
                     height: 258px;
                     margin-left: 24px;
                     position: relative;
+                    @include breakpoint (lg){
+                        width: 300px;
+                        height: 259px;
+                        border-radius: 10px;
+                    }
+                    @include breakpoint (md){
+                        background-image: none;
+                        margin-left: 7px;
+                        width: 158px;
+                        height: 216px;
+                    }
 
                     &:last-child{
                         margin-top: 24px;
@@ -135,7 +269,21 @@
                         position: absolute;
                         left: 40px;
                         bottom: 30px;
+                        @include breakpoint (xl){
+                            left: 18px;
+                            top: 47px;
+                        }
                     }
+                    
+                    p:hover{
+                        @include breakpoint (xl){
+                            color: $darkblue;
+                            cursor: pointer;
+                        }
+                        @include breakpoint (md){
+                            color: $darkblue;
+                            cursor: default;
+                        }}
                 }
             }
 
@@ -143,9 +291,82 @@
     }
 }
 
+.reviews_xl{
+    display: none;
+    @include breakpoint (xl){
+        display: block;
+        margin-top: 100px;
+        & .reviews_xl_flex{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 100px;
+            @include breakpoint (md){
+                background: url(../img/about.jpg);
+                border-radius: 11px;
+                background-repeat: no-repeat;
+                width: 373px;
+                margin: 0 auto;
+                margin-top: 39px;
+            }
+        }
+        & .reviews_one, .about_xl{
+            background: url(../img/about.jpg);
+            width: 365px;
+            height: 334px;
+            border-radius: 11px;
+            margin-top: 20px;
+            position: relative;
+            @include breakpoint (md){
+                background: none;
+            }
+            p{
+                position: absolute;
+                left: 18px;
+                top: 47px;
+                color: $white;
+                font-family: $ElMessiri;
+                font-weight: $superbold;
+                font-size: $fz24;
+                @include breakpoint (md){
+                    left: 29px;
+                    font-size: 30px;
+                }
+            }
+            p:hover{
+                @include breakpoint (md){
+                    color: $darkblue;
+                    background-color: $blue;
+                }
+            }
+        }
+        hr{
+            @include breakpoint (md){
+                display: none;
+            }}
+        .text-list{
+            display: flex;
+            justify-content: center;
+            font-family: $ElMessiri;
+            font-weight: $superbold;
+            font-size: 38px;
+            color: $white;
+            margin-top: 78px;
+            @include breakpoint (md){
+                margin-top: 45px;
+            }
+        }
+    }
+}
+
 .reviews{
     margin-top: 150px;
     color: $white;
+    @include breakpoint (lg){
+        margin-top: 100px;
+    }
+    @include breakpoint (xl){
+        display: none;
+    }
     
     .text-list{
         display: flex;
@@ -173,70 +394,105 @@
     }
 
     .reviewsflex{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 137px;
-
-        label{
-            position: relative;
-
+        margin-top: 100px;
+        @include breakpoint (lg){
+            margin-top: 50px;
         }
-        
-            
-        .text1, .text2, .text3{
-            width: 420px;
-            height: 276px;
-            background-color: $dark;
-            border-radius: 10px;
-            transition: transform 0.5s;
-            padding: 45px;
 
-            div{
-                font-family: $Montserrat;
-                font-weight: $superbold;
-                font-size: $fz16;
+        .slider{
+            position: relative;
+            .slider-pagination label{
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                border-radius: 3px;
+                background-color: gray;
+                cursor: pointer;
+                @include breakpoint (lg){
+                    width: 14px;
+                    height: 14px;
+                }
             }
-            p{
+            input{
+              opacity: 0;
+            }
+            .flex{
+                display: flex;
+                justify-content: space-around;
+            }
+            .z, .x, .c{
+                width: 410px;
+                height: 310px;
+                background-color: $dark;
+                border-radius: 10px;
+                transition: 1s;
                 font-family: $Montserrat;
                 font-weight: $thin;
-                font-size: $fz10;
+                font-size: $fz14;
+                line-height: 12px;
+                @include breakpoint (lg){
+                    width: 295px;
+                    height: 300px;
+                    line-height: 11px;
+                }
+                @include breakpoint (xl){
+                    width: 229px;
+                    line-height: 9px;
+                }
+
+                p{
+                    padding: 30px;
+                    @include breakpoint (lg){
+                        padding: 15px;
+                    }
+                }
+
+                p:first-child{
+                    font-size: $fz16;
+                    font-weight: $superbold;
+                    padding-bottom: 7px;
+                }
             }
-
-        }
-
-
-        .check1{
-            position: absolute;
-            top: 373px;
-            left: 680px;
-        }
-        .check1:checked ~ .text1{
-            transform: scale(1.2);
-            background: $blue;
-            font-size: $fz14;
-        }
-
-        
-        .check2{
-            position: absolute;
-            top: 373px;
-            left: 205px;
-        }
-        .check2:checked ~ .text2{
-            transform: scale(1.2);
-            background: $blue;
-            font-size: $fz14;
-        }
-         
-        .check3{
-            position: absolute;
-            top: 374px;
-            left: -268px;
-        }
-        .check3:checked ~ .text3{
-            transform: scale(1.2);
-            background: $blue;
-            font-size: $fz14;
+            .page1{
+                position: absolute;
+                left: 45%;
+                top: 400px;
+                @include breakpoint (lg){
+                    top: 390px;
+                }
+            }
+            
+            .page2{
+                position: absolute;
+                left: 49%;
+                top: 400px;
+                @include breakpoint (lg){
+                    top: 390px;
+                }
+            }
+            .page3{
+                position: absolute;
+                left: 53%;
+                top: 400px;
+                @include breakpoint (lg){
+                    top: 390px;
+                }
+            }
+            .slide-radio1:checked~.slider-pagination .page1,
+            .slide-radio2:checked~.slider-pagination .page2,
+            .slide-radio3:checked~.slider-pagination .page3{
+                background: $white;
+            }
+            .slide-radio1:checked ~.flex .z,
+            .slide-radio2:checked~.flex .x,
+            .slide-radio3:checked~.flex .c{
+            transform: scale(1.4);
+            background-color: $blue;
+            line-height: 15px;
+            @include breakpoint (lg){
+                line-height: 12px;
+            }
+            }
         }
     }
 }
@@ -244,6 +500,12 @@
 .about{
     color: $white;
     margin-top: 226px;
+    @include breakpoint (lg){
+        margin-top: 150px;
+    }
+    @include breakpoint (xl){
+        display: none;
+    }
 
     .text-list{
         display: flex;
@@ -274,6 +536,10 @@
         padding-top: 100px;
         width: 1076px;
         margin: 0 auto;
+        @include breakpoint (lg){
+            padding-top: 40px;
+            width: 999px;
+        }
 
         .about_flex{
             display: flex;
@@ -321,7 +587,13 @@
     margin-top: 50px;
     width: 1076px;
     margin: 0 auto;
-
+    @include breakpoint (xl){
+        width: 757px;
+    }
+    @include breakpoint (md){
+        width: 357px;
+    }
+    
 
     .text-list{
         display: flex;
@@ -329,6 +601,8 @@
         font-family: $ElMessiri;
         font-weight: $superbold;
         font-size: $fz42;
+        @include breakpoint (xl){
+            display: none;}
 
         .list, .list1{
             width: 28px;
@@ -352,25 +626,83 @@
         display: flex;
         justify-content: space-between;
         padding-top: 100px;
+        @include breakpoint (lg){
+            flex-direction: column-reverse;
+            align-items: center;
+            padding-top: 50px;
+            margin-bottom: 50px;
+        }
+        @include breakpoint (xl){
+            flex-direction: row;
+        }
 
         div:last-child{
             background: url(../img/sessions.jpg);
             width: 526px;
             height: 396px;
             border-radius: 11px;
+            @include breakpoint (xl){
+                width: 911px;
+            }
+            @include breakpoint (md){
+                display: none;
+            }
         }
         .cost{
             display: flex;
             width: 526px;
             padding-top: 103px;
+                @include breakpoint (lg){
+                   padding-top: 50px;
+                   justify-content: center;
+                @include breakpoint (xl){
+                    justify-content: left;
+                    margin-left: 0px;
+                    padding-top: 33px;
+                }
+            }
             li{
                 margin-bottom: 31px;
+                font-family: $Montserrat;
+                font-weight: $light;
+                font-size: $fz18;
+                
             }
             ul:first-child li{
-                margin-bottom: 43px;
+                margin-bottom: 46px;
+                @include breakpoint (xl){
+                   display: none;}
             }
             ul:nth-child(2){
                 margin-right: 23px;
+            }
+            .prise_hover{
+                @include breakpoint (xl){
+                    display: none;}
+            }
+            ul:nth-child(2) li{
+                @include breakpoint (xl){
+                    background-color: $blue;
+                    border-radius: 3px;
+                    height: 55px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                @include breakpoint (md){
+                    justify-content: center;
+                }
+            }
+            ul:nth-child(2) li:hover{
+                @include breakpoint (xl){
+                    color: $darkblue;
+                    cursor: pointer;
+                }
+            }
+        }
+        .cost{
+            @include breakpoint (md){
+                justify-content: center;
             }
         }
     }
@@ -379,6 +711,12 @@
         flex-direction: row-reverse;
         padding-top: 30px;
         padding-right: 142px;
+        font-family: $ElMessiri;
+        font-weight: $superbold;
+        font-size: $fz20;
+        @include breakpoint (lg){
+            display: none;
+        }
     }
     .marker{
         width: 18px;
@@ -393,10 +731,29 @@
 .adress{
     margin-top: 209px;
     color: $white;
+    @include breakpoint (lg){
+        margin-top: 100px;
+    }
+    @include breakpoint (xl){
+        display: none;
+    }
 
     .contanier{
         display: flex;
         justify-content: space-between;
+        .map{
+            iframe{
+                width: 856px;
+                height: 604px;
+                @include breakpoint (lg){
+                    width: 654px;
+                    height: 504px;
+                }
+            }
+            @include breakpoint (xl){
+                display: none;
+            }
+        }
 
         .map_adress{
             display: flex;
@@ -408,8 +765,65 @@
                 height: 290px;
                 background-color: $blue;
                 border-radius: 10px;
+                @include breakpoint (lg){
+                    width: 303px;
+                    height: 249px;
+                }
+
+                ul{
+                    margin-top: 35px;
+                    margin-left: 45px;
+                    @include breakpoint (lg){
+                        margin-top: 10px;
+                        margin-left: 25px;
+                    }
+
+                    li{
+                        padding-bottom: 21px;
+                        font-family: $Montserrat;
+                        font-weight: $light;
+                        font-size: $fz14;
+
+                        &:first-child{
+                            font-family: $ElMessiri;
+                            font-weight: $superbold;
+                            font-size: $fz24;
+                        }
+                    }
+                    i{
+                        margin-right: 23px;
+                    }
+                }
+                button{
+                    margin-top: 9px;
+                    margin-left: 45px;
+                    width: 155px;
+                    height: 36px;
+                    font-family: $Montserrat;
+                    font-weight: $bold;
+                    font-size: $fz13;
+                    color: $blue;
+                    border: none;
+                    border-radius: 3px;
+                }
             }
         }
     }
 }
+
+.end{
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    font-family: $Montserrat;
+    font-weight: $light;
+    font-size: $fz14;
+    margin-top: 90px;
+    margin-bottom: 30px;
+    @include breakpoint (lg){
+        margin-top: 30px;
+    }
+}
+
+
 

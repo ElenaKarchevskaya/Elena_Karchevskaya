@@ -9,10 +9,10 @@ Error: Undefined variable: "$Montserrat".
 6: body{
 7:     font-family: $Montserrat;
 8:     background-color: #0e232d;
-9:     height: 10000px;
-10: }
-11: .contanier{
-12:     width: $xl;
+9: }
+10: .contanier{
+11:     width: $xl;
+12:     margin: 0 auto;
 
 Backtrace:
 C:\IT-Academy\Elena_Karchevskaya\FD1-194-22\MyFlexMaket\css\originally.scss:7
@@ -62,4 +62,4 @@ C:/$Recycle.Bin/S-1-5-21-1783054587-2259006310-3642038893-1001/$R4IR31T/bin/sass
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$Montserrat\".\A         on line 7 of C:\IT-Academy\Elena_Karchevskaya\FD1-194-22\MyFlexMaket\css\originally.scss\A \A 2:     margin: 0;\A 3:     padding: 0;\A 4:     box-sizing: border-box;\A 5: }\A 6: body{\A 7:     font-family: $Montserrat;\A 8:     background-color: #0e232d;\A 9:     height: 10000px;\A 10: }\A 11: .contanier{\A 12:     width: $xl;"; }
+  content: "Error: Undefined variable: \"$Montserrat\".\A         on line 7 of C:\IT-Academy\Elena_Karchevskaya\FD1-194-22\MyFlexMaket\css\originally.scss\A \A 2:     margin: 0;\A 3:     padding: 0;\A 4:     box-sizing: border-box;\A 5: }\A 6: body{\A 7:     font-family: $Montserrat;\A 8:     background-color: #0e232d;\A 9: }\A 10: .contanier{\A 11:     width: $xl;\A 12:     margin: 0 auto;"; }

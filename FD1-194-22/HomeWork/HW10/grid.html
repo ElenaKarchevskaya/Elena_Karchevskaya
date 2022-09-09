@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKET_GRID</title>
+    <style>
+        ul li{
+            list-style-type: none;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "header header"
+                                 "menu content"
+                                 "footer footer";
+            background: url(../HW6/img/ball.png) repeat-y right;
+
+        }
+        .header, .footer{
+            display: grid;
+            background-color: aqua;
+            height: 50px;
+            color: blue;
+            font-weight: 700;
+            font-size: x-large;
+            align-items: center;
+            justify-items: center;
+        }
+        .menu{
+            background-color: rgb(229, 135, 27);
+        }
+        .menu p{
+           text-align: center;
+           font-weight: 600;
+        }
+        .content{
+            padding: 10px;
+        }
+        .content h3{
+            text-align: center;
+        }
+        img{
+            float: left;
+            margin-right: 10px;
+        }
+
+        .header{grid-area: header;}
+        .menu{grid-area: menu;}
+        .content{grid-area: content;}
+        .footer{grid-area: footer;}
+
+        @media (max-width: 740px){
+            .grid{
+                grid-template-columns: 1fr;
+                grid-template-areas: "content"
+                                     "menu";
+                background: none;
+            }
+            .header, .footer{
+                display: none;
+            }
+            .content{
+                display: grid;
+                align-items: center;
+                justify-items: center;
+
+            }
+            .menu{
+                background-color: white;
+            }
+            .menu li{
+                display: inline-block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header">ПРИВЕТ УЧАСТНИКАМ СОРЕВНОВАНИЙ!</div>
+        <div class="menu">
+            <p>Виды спорта:</p>
+            <ul>  
+                    <li><a href="div.html">конькобежный спорт</a></li>
+                    <li><a href="div.html">биатлон</a></li>
+                    <li><a href="div.html">футбол</a></li>
+                    <li><a href="div.html">стрельба из лука</a></li>
+                    <li><a href="div.html">прыжки в длину</a></li>
+                    <li><a href="div.html">прыжки в высоту</a></li>
+                    <li><a href="div.html">фигурное катание</a></li>
+                    <li><a href="div.html">синхронное плавание</a></li>
+                    <li><a href="div.html">шахматы</a></li>
+                    <li><a href="div.html">шашки</a></li>
+                    <li><a href="div.html">фигурное катание</a></li>
+                    <li><a href="div.html">легкая атлетика</a></li>
+                    <li><a href="div.html">тяжелая атлетика</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h3>Футбол</h3>
+            <img src="../HW6/img/people.png" alt="people">
+            <p>
+                Футбол - командный вид спорта, в котором целью является забить мяч в ворота соперника ногами
+                или другими частями теле (кроме рук) большее количество раз, чем команда соперникаю.
+            </p>
+            <p>
+                Есть 17 официальных правил игры, каждое из которых содержит список оговорок и руководящих принципов. 
+                Эти правила предназначены для примененич на всех уровнях футбола, хотя есть некоторые изменения для таких групп, 
+                как юниоры, взрослые, женщины и люди с ограничеными физическими возможностями. Звконы очень часто формулировались в общих 
+                чертах, которые позволяют упростить их применение в зависимомти от характера игры.
+            </p></div>
+        <div class="footer">ГЛАВНОЕ НЕ ПОПЕДА, А УЧАСТИЕ!</div>
+    </div>
+</body>
+</html>

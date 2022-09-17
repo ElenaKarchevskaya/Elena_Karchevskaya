@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="ввод информации о стране" onclick="addcountries()"><br>
+    <br>
+    <input type="button" value="получение информации о стране" onclick="info()"><br>
+    <br>
+    <input type="button" value="перечень всех стран" onclick="listCountries()"><br>
+    <br>
+    <input type="button" value="удаление информации о стране" onclick="deleteCoutries()">
+    
+    <script>
+        var countriesS={'Беларусь':'Минск','Россия':'Москва','Франция':'Париж','Германия':'Берлин','Польша':'Варшава','Литва':'Вильнус','Латвия':'Рига','Украина':'Киев','Испания':'Мадрид','Италия':'Рим','Греция':'Афины'}
+
+        function addcountries(){
+            var country=prompt('введите название страны: ')
+            var capital=prompt('введите название столицы: ')
+            countriesS[country]=capital;
+            console.log(countriesS);
+        }
+
+        function info(){
+        var coutriesname=prompt('Чтобы получить информацию введите название страны: ')
+        if ( coutriesname in countriesS )
+          alert('Страна: ' + coutriesname + '\n\r' + 'Столица: ' + countriesS[coutriesname]);
+        else
+          alert( 'нет информации о стране ' + coutriesname + '!' );   
+        };
+        
+
+        function listCountries(){
+            var countriesS={'Беларусь':'Минск','Россия':'Москва','Франция':'Париж','Германия':'Берлин','Польша':'Варшава','Литва':'Вильнус','Латвия':'Рига','Украина':'Киев','Испания':'Мадрид','Италия':'Рим','Греция':'Афины'}
+            for ( var CN in countriesS )
+            console.log('страна: ' + CN + ' столица: ' + countriesS[CN] );
+        };
+
+        function deleteCoutries(){
+            var country=prompt('введите название страны: ')
+            delete countriesS[country];
+            console.log(countriesS);
+        }
+
+        </script>
+</body>
+</html>

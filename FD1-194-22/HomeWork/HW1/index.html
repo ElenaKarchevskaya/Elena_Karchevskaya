@@ -1,24 +1,80 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIARY</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <style>
-        body{
-            width: 50%;
-        }
-    </style>
+		.modal-content{
+			border: none;
+			background-color: aqua;
+		}
+	</style>
 </head>
-<body>
-    <h2 align="center">Дневник партизана</h2>
-    <ol>
-        <li><strong>Вторник.</strong> Выбили <a href="../../index.html" target="_blank" title="Жми!">немцев</a> с опушки. Засели в доме лесника</li>
-        <li><strong>Среда.</strong> Мощная контратака немцев вынудила нас оставить занятые ранее позиции.</li>
-        <li><strong>Четверг.</strong> Под покровом ночи смогли снова засесть в доме лесника. Курим «Беломор».</li>
-        <li><strong>Пятница.</strong> Вернулся лесник и всех выгнал.</li>
-    </ol>
-    <p>&#169; бородатый <a href="../../index.html" target="_blank" title="Жми!">анекдот</a> </p>
+  <body>
+    <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>-->
+
+	<div class="header">
+        <div class="contanier">
+            <img src="img/Group 1.svg" alt="">
+
+            <ul>
+                <li><a href="flex.html">Главная</a></li>
+                <li><a href="#1">Сеансы</a></li>
+                <li><a href="#2">Отзывы</a></li>
+                <li class="contact"><a href="#5">Контакты</a>
+                    <a href="" class="tel">+79061234567</a>
+                </li>
+                <li><a href="newfront.html">Новости</a></li>
+                <li><a href="#3">Обо мне</a></li>
+                <li><a href="blog.html">Блог</a></li>
+            </ul>
+
+            <div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться на сеанс</button></div>
+        </div>
+        
+    </div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Записаться на сеанс</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Введите имя:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Введите номер телефона</label>
+			<input type="tel" class="form-control" id="message-text">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Отправить</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    
+<script>let form = document.createElement('form');
+	form.action = 'https://google.com/search';
+	form.method = 'GET';
+	
+	form.innerHTML = '<input name="q" value="test">';
+	
+	// перед отправкой формы, её нужно вставить в документ
+	document.body.append(form);
+	
+	form.submit();
+</script>
 </body>
 </html>

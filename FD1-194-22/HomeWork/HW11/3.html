@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+    <!--Для подключения на HTML-страницу JavaScript-кода, который вынесен в отдельный js-файл, можно применять парный тег script:
+
+<script type='text/javascript' src='filename.js'></script>
+
+или
+
+<script src='filename.js'></script>
+
+В теге script, который подключает внешний JavaScript-файл (т.е. в теге script с атрибутом src),
+не допускается написание кода между открывающим и закрывающим тегами script.
+Для написания кода требуется использовать ещё один тег script, в котором атрибута src нет.
+
+Код, вынесенный во внешний js-файл, при подключении файла тегом script будет загружен и выполнен, и только потом продолжится отображение HTML-кода, расположенного после тега script.
+
+Тег script, подключающий внешний js-файл, может быть помещён в любое место веб-страницы, но:
+Если JavaScript-код не запускается сразу при загрузке js-файла, а содержит функции, которые могут быть вызываны до полной загрузки HTML-страницы (например, при нажатии пользователем на кнопку), код следует загружать в теге head или в самом начале тега body.
+Если JavaScript-код запускается сразу и должен работать с какими-либо частями HTML-страницы, код следует загружать в самом низу тега body.-->
+</head>
+<body>
+    <!--исполнение кода при нажатии на кнопку
+    <input type="button" value="приветствие" onclick="alert('Добрый день!')">
+    <br>
+    <input type="button" value="прощание" onclick='goodbye()'>
+    <script>
+        function goodbye(){
+            alert('До свидания!');
+        }
+    </script>-->
+    <script>
+        /*
+        //функции с вызовом этой функции
+        calc(5,10,"+");
+        calc(10,5,"-");
+        calc(50,10,"/");
+        calc(5,10,"*");
+
+        function calc(x,y,oper){
+            //debagger
+            switch (oper){
+                case "+":
+                    console.log(x+y);
+                    break;
+                case "-":
+                    console.log(x-y);
+                    break;
+                case "/":
+                    console.log(x/y);
+                    break;
+                case "*":
+                    console.log(x*y);
+                    break;            
+            }
+        }*/
+
+
+        /*
+        //мы хотим сложить результаты функций, для этого консоль меняем на return, но так как у нас нет консоли
+        //и что бы данные куда-то записывались мы вводим var
+        var num1 = calc(5,3,"-");
+        var num2 = calc(10,5,"/");
+        console.log(num1+num2);
+
+        function calc(x,y,oper){
+            switch (oper){
+                case "+": return x+y;
+                case "-": return x-y;
+                case "/": return x/y;
+                case "*": return x*y;
+            }
+        }*/
+
+
+        /*
+        //пример функции получения количества дней в году
+        function getday(day){
+            if( day%4 == 0)
+               return 366;
+            else
+               return 365;   
+        }
+        console.log('2013-365 days' + getday(2013));
+        console.log('2012-366 days' + getday(2012));*/
+
+
+        /*
+        //области видимости, здесь будет 5, тк сначало ссылаеться на 
+        //локальную область видимости, а если бы добавим переменную b, то будет
+        //ссылать на глобальную тк локальной b у нас нет
+        //а если нет ни в глобальной ни в лакальной до будет underfund
+        var a=10;
+        var b=3;
+        function logger(){
+            var a=5;
+            //console.log(a);
+            console.log(b);
+        }
+        logger();*/
+
+        /*//пример
+        var a=3;
+        var g=100;
+
+        function f(m){
+            var a=5;
+            var b=10;
+
+            console.log("f видит m="+m);
+            console.log("f видит a="+a);
+            console.log("f видит b="+b);
+            console.log("f видит g="+g);
+        }
+        f(51);
+        console.log("основной код видит a="+a);
+        console.log("основной код видит g="+g);*/
+
+        /*//получение словоформы пример
+        function getword(num,word1,word2,word5){
+            var dd=num%100;
+            if ((dd>=11) && (dd<=19))
+               return word5;
+            var d=num%10;
+            if(d==1)
+               return word1;
+            if((d>=2) && (d<=4))
+               return word2;
+            return word5;        
+        }
+        var applesS=prompt('сколько у вас яблок?');
+        var apples=parseInt(applesS);
+        console.log('у вас '+ apples + '' + getword(apples,'яблоко','яблока','яблок')+ '!');*/
+
+        
+        /*//массивы arrey
+        var arr=[1,2,3,4,5];
+        //или
+        var arr1=new Array(1,2,3,4,5);
+        //console.log(arr[2]);//что бы вывелась 3ка нужно написать 2, тк отсчет в консоле идет с 0
+
+        //lenght возвращает количество эл массива
+        for(i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        }
+        //пример
+        var weekdays=['пн','фт','ср','чт','пт','сб','вс',];
+        console.log(weekdays.length);
+        //7
+        weekdays[1]='вт';
+        console.log(weekdays[1]);
+        //вт(вместо фт)*/
+
+
+       /* //хэши(объекты)
+        var personobj={
+            name:'alena',
+            passport:12345, //те если мы добавим доп строки такиеи как passport и тд ничего не сломается
+            surname:'karchevskaya',
+            age:30
+        }
+        //допустим мы хотим var name='oleg', но в консоле оно не измениться там останется alena
+        //поэтому лучше записывать так console.log('name' + personobj[name] + 'surname' + personobj[surname] + 'passport ' + personobj.surname);
+        console.log('name' + personobj.name + 'surname' + personobj.surname + 'passport ' + personobj.surname);
+        //хотим удалить ключ
+        delete personObj['name'];*/ 
+
+
+       /* //цикл for in
+        var personobj={
+            name:'alena',
+            passport:12345, //те если мы добавим доп строки такиеи как passport и тд ничего не сломается
+            surname:'karchevskaya',
+            age:30
+        }
+        for (var key in personobj){
+            console.log('key: '+ key + "value:" + personobj[key]);
+        }*/
+
+    /*var countrysH={};
+
+    function addCountry(countryName,capitalName) {
+        countrysH[countryName]=capitalName;
+    }
+
+    function deleteCountry(countryName) {
+        delete countrysH[countryName];
+    }
+
+    function getCountryInfo(countryName) {
+        if ( countryName in countrysH )
+            return 'страна: ' + countryName + ' столица: ' + countrysH[countryName] ;
+        else
+            return 'нет информации о стране ' + countryName + '!' ;
+    }
+
+    function listCountrys() {
+        var res="";
+        for ( var CN in countrysH )
+            res+='\n'+getCountryInfo(CN);
+        return res;
+    }
+
+    addCountry('Германия','Берлин');
+    addCountry('Венгрия','Будапешт');
+    addCountry('Франция','Париж');
+
+    console.log( "список стран:" + listCountrys() );*/
+
+   /* var сountrysH={ 'Германия':'Берлин', 'Венгрия':'Будапешт', 'Франция':'Париж' };
+
+    for ( var CN in сountrysH )
+        console.log( 'страна: ' + CN + ' столица: ' + сountrysH[CN] );
+*/
+              
+
+
+    </script>
+</body>
+</html>

@@ -19,8 +19,8 @@
 }
 .header{
     color: $white;
-    padding-top: 30px;
-
+    padding-top: 30px;           
+    position: relative;
     .contanier{
         display: flex;
         justify-content: space-between;
@@ -32,17 +32,30 @@
             @include breakpoint (xl){
                 width: 100px;
             }}
-    }
-    ul{
-        display: flex;
-        @include breakpoint (xl){
-            padding-top: 26px;
         }
-        @include breakpoint (md){
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            margin-left: 31px;
+        .contact{
+            position: relative;
+        }
+        .contact:hover .tel{
+            display: block;
+        }
+        .tel{
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            color: $blue;
+        }
+        ul{
+           display: flex;
+           @include breakpoint (xl){
+              padding-top: 26px;
+            }
+            @include breakpoint (md){
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              margin-left: 31px;
         }
 
         li{
@@ -68,7 +81,7 @@
         li:hover{
             color: $blue;
         }
-    }
+    }    
     div button{
         width: 155px;
         height: 36px;
@@ -198,6 +211,7 @@
 
         .item-left{
             position: relative;
+            display: block;
             width: 416px;
             height: 540px;
             background-image: url(../img/uderwother1.png);
@@ -214,8 +228,7 @@
                 background-image: none;
                 margin-bottom: 0px;
             }
-
-            p{
+            span{
                 position: absolute;
                 bottom: 50px;
                 left: 50px;
@@ -224,7 +237,7 @@
                     top: 47px;
                 }
             }
-            p:hover{
+            span:hover{
                 @include breakpoint (xl){
                     color: $darkblue;
                     cursor: pointer;
@@ -243,7 +256,8 @@
             
             .item{
 
-                div{
+                a{
+                    display: block;
                     background: url(../img/underwother.png) no-repeat;
                     width: 416px;
                     height: 258px;
@@ -265,7 +279,7 @@
                         margin-top: 24px;
                     }
 
-                    p{
+                    span{
                         position: absolute;
                         left: 40px;
                         bottom: 30px;
@@ -275,7 +289,7 @@
                         }
                     }
                     
-                    p:hover{
+                    span:hover{
                         @include breakpoint (xl){
                             color: $darkblue;
                             cursor: pointer;
@@ -283,7 +297,8 @@
                         @include breakpoint (md){
                             color: $darkblue;
                             cursor: default;
-                        }}
+                        }
+                    }
                 }
             }
 
@@ -827,3 +842,389 @@
 
 
 
+//Blog
+.content-blog{
+    color: $white;
+    margin: 50px 0 30px 0;
+    .contanier{
+        .text-list{
+        display: flex;
+        justify-content: center;
+        font-family: $ElMessiri;
+        font-weight: $superbold;
+        font-size: $fz42;
+        margin: 60px 0 60px 0;
+    
+        .list, .list1{
+            width: 28px;
+            height: 14px;
+            background: $blue;
+            border-radius: 7px;
+            @include breakpoint (md){
+                display: none;
+            }
+        }
+        .list{
+            transform: skew(53deg);
+            margin-right: 50px;
+            margin-top: 20px;}
+        .list1{
+            transform: skew(-53deg);
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        }
+        .contanier_blog1, .contanier_blog2{
+            height: 530px;
+            border: 1px solid $blue;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 50px;
+            .foto{
+                background: url(../img/image.jpg);
+                width: 564px;
+                height: 430px;
+                border-radius: 10px;
+            }
+            .text{
+                width: 564px;
+                height: 430px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                button:nth-child(1), button:nth-child(4){
+                    width: 96px;
+                    height: 30px;
+                    background: $blue;
+                    border-radius: 5px;
+                    font-family: $Montserrat;
+                    font-size: $fz14;
+                    font-weight: $superbold;
+                    color: $white;
+                }
+                button:nth-child(4){
+                    width: 134px;
+                    height: 39px;
+                }
+                p:nth-child(2){
+                    font-family: $ElMessiri;
+                    font-size: $fz24;
+                    font-weight: $superbold;
+                }
+                p:nth-child(3){
+                    font-family: $Montserrat;
+                    font-weight: $thin;
+                    font-size: $fz16;
+                }
+            }
+        }
+        .contanier_blog2{
+            margin: 45px 0 120px 0;
+        }
+        .endblog{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            font-size: $fz14;
+        }
+    }
+}
+
+
+//sessios 1-5
+.sessions_info{
+    color: $white;
+    margin: 50px 0 30px 0;
+    .contanier{
+        .text-list{
+        display: flex;
+        justify-content: center;
+        font-family: $ElMessiri;
+        font-weight: $superbold;
+        font-size: $fz42;
+        margin: 60px 0 60px 0;
+    
+        .list, .list1{
+            width: 28px;
+            height: 14px;
+            background: $blue;
+            border-radius: 7px;
+            @include breakpoint (md){
+                display: none;
+            }
+        }
+        .list{
+            transform: skew(53deg);
+            margin-right: 50px;
+            margin-top: 20px;}
+        .list1{
+            transform: skew(-53deg);
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        }
+        .sessions_info1{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 50px;
+            margin: 0 0 120px 0;
+            .foto{
+                background: url(../img/image.jpg);
+                width: 564px;
+                height: 430px;
+                border-radius: 10px;
+            }
+            .text{
+                width: 564px;
+                height: 430px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .cost{
+                display: none;
+            }
+            button{
+                width: 134px;
+                height: 39px;
+                background: $blue;
+                border: none;
+                border-radius: 5px;
+                font-family: $Montserrat;
+                font-size: $fz14;
+                font-weight: $superbold;
+                color: $white;
+                position: relative;
+            }
+            button:hover ~ div.cost{
+                display: block;
+                width: 134px;
+                height: 39px;
+                background: $blue;
+                border-radius: 5px;
+                font-family: $Montserrat;
+                font-size: $fz14;
+                font-weight: $superbold;
+                color: $white;
+                position: absolute;
+                top: 420px;
+            }
+            p:nth-child(3){
+                font-family: $ElMessiri;
+                font-size: $fz24;
+                font-weight: $superbold;
+            }
+            p:nth-child(4){
+                font-family: $Montserrat;
+                font-weight: $thin;
+                font-size: $fz16;
+            }
+        }
+        .endblog{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            font-size: $fz14;
+        }
+    }
+}
+
+
+
+//button fixed
+#toTop {
+	display:none;
+	text-decoration:none;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	overflow:hidden;
+	width:51px;
+	height:51px;
+	background:url(../img/ui.totop.png) no-repeat left top;
+	border:none;
+	text-indent:100%;
+}
+#toTopHover {
+	background:url(../img/ui.totop.png) no-repeat left top;
+	width:51px;
+	height:51px;
+	display:block;
+	overflow:hidden;
+	float:left;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+	outline:none;
+}
+
+
+//news
+.news{
+    color: $white;
+    margin: 50px 0 30px 0;
+    .contanier{
+        .text-list{
+        display: flex;
+        justify-content: center;
+        font-family: $ElMessiri;
+        font-weight: $superbold;
+        font-size: $fz42;
+        margin: 60px 0 60px 0;
+    
+        .list, .list1{
+            width: 28px;
+            height: 14px;
+            background: $blue;
+            border-radius: 7px;
+            @include breakpoint (md){
+                display: none;
+            }
+        }
+        .list{
+            transform: skew(53deg);
+            margin-right: 50px;
+            margin-top: 20px;}
+        .list1{
+            transform: skew(-53deg);
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        }
+        .news_today{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 120px;
+            & div{
+                width: 416px;
+                height: 258px;
+                position: relative;
+                &:nth-child(1), &:nth-child(2), &:nth-child(4), &:nth-child(5){
+                    margin-right: 24px;
+                }
+                &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                    margin-bottom: 24px;
+                }
+                a{
+                    display: block;
+                    background: url(../img/underwother.png);
+                    width: 416px;
+                    height: 258px;
+                }
+                span{
+                    position: absolute;
+                    bottom: 30px;
+                    left: 35px;
+                    font-family: $ElMessiri;
+                    font-weight: $superbold;
+                    font-size: $fz20;
+                }
+                button{
+                    position: absolute;
+                    top: 30px;
+                    left: 35px;
+                    width: 96px;
+                    height: 30px;
+                    background-color: $blue;
+                    border: none;
+                    color: $white;
+                    border-radius: 5px;
+                    
+                }
+            }
+        }
+        .endblog{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            font-size: $fz14;
+        }
+    }
+}
+
+//content_news
+.content-news{
+    color: $white;
+    margin: 50px 0 30px 0;
+    .contanier{
+        .text-list{
+        display: flex;
+        justify-content: center;
+        font-family: $ElMessiri;
+        font-weight: $superbold;
+        font-size: $fz42;
+        margin: 60px 0 60px 0;
+    
+        .list, .list1{
+            width: 28px;
+            height: 14px;
+            background: $blue;
+            border-radius: 7px;
+            @include breakpoint (md){
+                display: none;
+            }
+        }
+        .list{
+            transform: skew(53deg);
+            margin-right: 50px;
+            margin-top: 20px;}
+        .list1{
+            transform: skew(-53deg);
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        }
+        .contanier_new{
+            border: 1px solid $blue;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 50px;
+            margin-bottom: 120px;
+            .foto{
+                background: url(../img/image.jpg);
+                width: 564px;
+                height: 430px;
+                border-radius: 10px;
+                margin-bottom: 50px;
+            }
+            .text{
+                width: 564px;
+                p{
+                    padding-bottom: 30px;
+                    &:first-child{
+                        font-family: $ElMessiri;
+                        font-size: $fz24;
+                        font-weight: $superbold;
+                    }
+                    &:last-child{
+                        font-family: $Montserrat;
+                        font-weight: $thin;
+                        font-size: $fz16;
+                    }
+                }
+            }
+            button{
+                width: 134px;
+                height: 39px;
+                background: $blue;
+                border-radius: 5px;
+                font-family: $Montserrat;
+                font-size: $fz14;
+                font-weight: $superbold;
+                color: $white;
+                margin-bottom: 50px;
+            }
+        }
+        .endblog{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            font-size: $fz14;
+        }
+    }
+}

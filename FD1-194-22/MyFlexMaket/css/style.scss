@@ -17,10 +17,73 @@
     }
     
 }
+
+.dropdown{
+    display: none;
+    @include breakpoint(md){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    img{
+        width: 150px;
+        margin-bottom: 20px;
+    }
+    .dropbtn {
+        background-color: $blue;
+        color: $white;
+        padding: 14px;
+        font-family: $ElMessiri;
+        font-size: $fz20;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        width: 100px;
+        margin-right: 290px;
+      }
+       
+       
+      .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+      }
+       
+       
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+       
+       
+      .dropdown-content {
+        display: none;
+        //background-color: $dark;
+        min-width: 160px;
+        border-radius: 5px;
+        z-index: 1;
+        margin: 5px 240px 0 0;
+      }
+       
+       
+      .dropdown-content a {
+        color: $white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border: 1px solid $blue;
+        border-radius: 5px;
+        margin: 5px;
+      }
+       
+       
+      .dropdown-content a:hover {background-color: $dark}
+       
+      .show {display:block;}
+      
+}       
 .header{
     color: $white;
-    padding-top: 30px;           
-    position: relative;
+    padding-top: 30px;
     .contanier{
         display: flex;
         justify-content: space-between;
@@ -28,6 +91,10 @@
         @include breakpoint (xl){
             flex-direction: column;
         }
+        @include breakpoint(md){
+            display: none;
+        }
+        
         img{
             @include breakpoint (xl){
                 width: 100px;
@@ -52,12 +119,8 @@
               padding-top: 26px;
             }
             @include breakpoint (md){
-              display: flex;
-              flex-direction: column;
-              width: 100%;
-              margin-left: 31px;
+                display: none;
         }
-
         li{
             margin-right: 50px;
             font-family: $Montserrat;
@@ -68,15 +131,23 @@
             }
             @include breakpoint (xl){
                 font-size: 16px;
-                margin-right: 20px;
-            }
-            @include breakpoint (md){
-                margin-bottom: 10px;
+                margin-right: 50px;
             }
          
             &:last-child{
                 margin-right: 0px;
             }
+        }
+        li:nth-child(6), li:nth-child(3){
+            @include breakpoint (xl){
+                display: none;
+        }
+        }
+        .headerxl{
+            display: none;
+            @include breakpoint (xl){
+                display: block;
+        }
         }
         li:hover{
             color: $blue;
@@ -86,16 +157,91 @@
         width: 155px;
         height: 36px;
         background-color: $blue;
+        text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
         color: $white;
         border: none;
         border-radius: 3px;
         font-family: $Montserrat;
         font-weight: $bold;
         font-size: $fz13;
+        overflow: hidden;background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+        background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+        background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+        background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+        background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
         @include breakpoint (xl){
             display: none;
         }
+        
+        
     }
+    div button:hover{
+        cursor: pointer;
+          box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
+          background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+          background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+          background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+          background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+          background-image: linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    }
+    .modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6bcef69b;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 1;
+    @include breakpoint (md){
+        display: none;
+    }
+    }
+    .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $darkblue;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    }
+    .close-button {
+    float: right;
+    width: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: $blue;
+    }
+    .close-button:hover {
+    background-color: #adadad;
+    }
+    .show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }/*Поля для ввода*/
+.main-form-input{
+margin-bottom: 2.7rem;
+border: 1px solid #dddddd;
+border-radius: 5px;
+width: 80%;
+padding: 2rem; 
+}
+/*Кнопка отправить заявку*/
+.main-form-btn.header__btn{
+  width: 100%;
+  height: 5.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
 }
 
 .header-item{
@@ -204,8 +350,7 @@
             align-items: center;
         }
         @include breakpoint (md){
-            background: url(../img/uderwother1.png);
-            width: 370px;
+            background: url(../img/uderwother1.png) no-repeat;
             border-radius: 10px;
         }
 
@@ -225,8 +370,10 @@
                 margin-bottom: 23px;
             }
             @include breakpoint (md){
-                background-image: none;
-                margin-bottom: 0px;
+                height: 100px;
+                border: 1px solid $darkblue;
+                margin-top: 5px;
+                margin-bottom: 0;
             }
             span{
                 position: absolute;
@@ -235,6 +382,9 @@
                 @include breakpoint (xl){
                     left: 18px;
                     top: 47px;
+                }
+                @include breakpoint (md){
+                    top: 30px;
                 }
             }
             span:hover{
@@ -245,17 +395,26 @@
                 @include breakpoint (md){
                     color: $darkblue;
                     cursor: default;
-                }}
+                }
+            }
+        }
+        .item-left:hover{
+            @include breakpoint(xl){ 
+                border: 2px solid $blue;
+            }
+            @include breakpoint(md){ 
+                border: 2px solid $blue;
+            }
         }
 
         .flex-items{
             display: flex;
             @include breakpoint (md){
-                margin-top: -177px;
+               flex-direction: column;
+               align-items: center;
+               justify-content: right;
             }
-            
             .item{
-
                 a{
                     display: block;
                     background: url(../img/underwother.png) no-repeat;
@@ -269,16 +428,17 @@
                         border-radius: 10px;
                     }
                     @include breakpoint (md){
-                        background-image: none;
-                        margin-left: 7px;
-                        width: 158px;
-                        height: 216px;
+                        height: 100px;
+                        margin: 5px 0 0 0;
+                        border: 1px solid $darkblue;
                     }
 
                     &:last-child{
                         margin-top: 24px;
+                        @include breakpoint (md){
+                            margin: 0;
+                        }
                     }
-
                     span{
                         position: absolute;
                         left: 40px;
@@ -286,6 +446,9 @@
                         @include breakpoint (xl){
                             left: 18px;
                             top: 47px;
+                        }
+                        @include breakpoint (md){
+                            top: 30px;
                         }
                     }
                     
@@ -300,74 +463,104 @@
                         }
                     }
                 }
+                a:nth-child(2){
+                    @include breakpoint (md){
+                       margin-top: 5px;
+                    }
+                }
+                a:nth-child(2) span{
+                    @include breakpoint (md){
+                      top: 10px;
+                    }
+                }
+                a:hover{
+                    @include breakpoint (xl){
+                        border: 2px solid $blue;
+                    }
+                    @include breakpoint (md){
+                        border: 2px solid $blue;
+                    }
+                }
             }
-
+            div:nth-child(2) a:nth-child(2){
+                    @include breakpoint (md){
+                       margin-bottom: 5px;
+                    }
+            }
+            div:nth-child(2) a:nth-child(1) span{
+                    @include breakpoint (md){
+                       top: 10px;
+                    }
+            }
         }
+        
     }
 }
 
-.reviews_xl{
+.media{
     display: none;
-    @include breakpoint (xl){
+    @include breakpoint(xl){
         display: block;
-        margin-top: 100px;
-        & .reviews_xl_flex{
+        margin-top: 50px;
+        .text-list{
+        display: flex;
+        justify-content: center;
+        font-family: $ElMessiri;
+        font-weight: $superbold;
+        font-size: $fz42;
+        color: $white;
+    
+        .list, .list1{
+            width: 28px;
+            height: 14px;
+            background: $blue;
+            border-radius: 7px;
+        }
+        .list{
+            transform: skew(53deg);
+            margin-right: 50px;
+            margin-top: 20px;
+        }
+        .list1{
+            transform: skew(-53deg);
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        }
+        .reviewsxl{
             display: flex;
             justify-content: space-around;
-            margin-bottom: 100px;
-            @include breakpoint (md){
-                background: url(../img/about.jpg);
-                border-radius: 11px;
-                background-repeat: no-repeat;
-                width: 373px;
-                margin: 0 auto;
-                margin-top: 39px;
+            margin-top: 50px;
+            div{
+                width: 240px;
+                border: 1px solid $blue;
+                border-radius: 5px;
+                padding: 10px;
             }
-        }
-        & .reviews_one, .about_xl{
-            background: url(../img/about.jpg);
-            width: 365px;
-            height: 334px;
-            border-radius: 11px;
-            margin-top: 20px;
-            position: relative;
-            @include breakpoint (md){
-                background: none;
-            }
-            p{
-                position: absolute;
-                left: 18px;
-                top: 47px;
+            p:first-child{
                 color: $white;
-                font-family: $ElMessiri;
-                font-weight: $superbold;
-                font-size: $fz24;
-                @include breakpoint (md){
-                    left: 29px;
-                    font-size: 30px;
-                }
             }
-            p:hover{
-                @include breakpoint (md){
-                    color: $darkblue;
-                    background-color: $blue;
-                }
+            div:hover{
+                transform: scale(1.1);
+                color: $white;
+                cursor: pointer;
             }
-        }
-        hr{
-            @include breakpoint (md){
-                display: none;
-            }}
-        .text-list{
-            display: flex;
+            div:hover p:first-child{
+                color: $blue;
+            }
+        }   
+    }
+    @include breakpoint(md){
+        .reviewsxl{
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            font-family: $ElMessiri;
-            font-weight: $superbold;
-            font-size: 38px;
-            color: $white;
-            margin-top: 78px;
-            @include breakpoint (md){
-                margin-top: 45px;
+            div{
+                width: 300px;
+                margin-bottom: 10px;
+            }
+            div:hover{
+                transform: scale(1.04);
             }
         }
     }
@@ -436,8 +629,8 @@
                 justify-content: space-around;
             }
             .z, .x, .c{
-                width: 410px;
-                height: 310px;
+                width: 420px;
+                height: 300px;
                 background-color: $dark;
                 border-radius: 10px;
                 transition: 1s;
@@ -603,13 +796,16 @@
     width: 1076px;
     margin: 0 auto;
     @include breakpoint (xl){
-        width: 757px;
+        margin-top: 50px;
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    @include breakpoint (md){
-        width: 357px;
+    @include breakpoint(md){
+        width: 320px;
     }
-    
-
     .text-list{
         display: flex;
         justify-content: center;
@@ -617,13 +813,20 @@
         font-weight: $superbold;
         font-size: $fz42;
         @include breakpoint (xl){
-            display: none;}
+            flex-direction: column;
+        }
+        @include breakpoint(md){
+            font-size: 35px;
+        }
 
         .list, .list1{
             width: 28px;
             height: 14px;
             background: $blue;
             border-radius: 7px;
+            @include breakpoint (xl){
+                display: none;
+            }
         }
         .list{
             transform: skew(53deg);
@@ -643,24 +846,21 @@
         padding-top: 100px;
         @include breakpoint (lg){
             flex-direction: column-reverse;
-            align-items: center;
             padding-top: 50px;
             margin-bottom: 50px;
+            align-items: center;
         }
         @include breakpoint (xl){
-            flex-direction: row;
         }
 
         div:last-child{
-            background: url(../img/sessions.jpg);
+            background: url(../img/sessions.jpg) no-repeat;
             width: 526px;
             height: 396px;
             border-radius: 11px;
             @include breakpoint (xl){
-                width: 911px;
             }
             @include breakpoint (md){
-                display: none;
             }
         }
         .cost{
@@ -672,8 +872,6 @@
                    justify-content: center;
                 @include breakpoint (xl){
                     justify-content: left;
-                    margin-left: 0px;
-                    padding-top: 33px;
                 }
             }
             li{
@@ -686,40 +884,27 @@
             ul:first-child li{
                 margin-bottom: 46px;
                 @include breakpoint (xl){
-                   display: none;}
+                }
             }
             ul:nth-child(2){
                 margin-right: 23px;
             }
             .prise_hover{
                 @include breakpoint (xl){
-                    display: none;}
+                    //display: none;
+                }
             }
             ul:nth-child(2) li{
                 @include breakpoint (xl){
-                    background-color: $blue;
-                    border-radius: 3px;
-                    height: 55px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                @include breakpoint (md){
-                    justify-content: center;
                 }
             }
             ul:nth-child(2) li:hover{
                 @include breakpoint (xl){
-                    color: $darkblue;
+                    color: $blue;
                     cursor: pointer;
                 }
             }
-        }
-        .cost{
-            @include breakpoint (md){
-                justify-content: center;
-            }
-        }
+        }        
     }
     .surprise{
         display: flex;
@@ -744,18 +929,26 @@
 }
 
 .adress{
-    margin-top: 209px;
+    margin-top: 200px;
     color: $white;
     @include breakpoint (lg){
         margin-top: 100px;
     }
     @include breakpoint (xl){
-        display: none;
+        margin-top: 50px;
     }
-
     .contanier{
         display: flex;
         justify-content: space-between;
+        @include breakpoint (xl){
+            width: 768px;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include breakpoint (md){
+            width: 320px;
+            flex-direction: column-reverse;
+        }
         .map{
             iframe{
                 width: 856px;
@@ -764,9 +957,14 @@
                     width: 654px;
                     height: 504px;
                 }
-            }
-            @include breakpoint (xl){
-                display: none;
+                @include breakpoint (xl){
+                    width: 554px;
+                    height: 404px;
+                }
+                @include breakpoint (md){
+                    width: 320px;
+                    height: 320px;
+                }
             }
         }
 
@@ -774,6 +972,13 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @include breakpoint (xl){
+                flex-direction: row;
+                margin-top: 25px;
+            }
+            @include breakpoint (md){
+                flex-direction: column;
+            }
 
             div{
                 width: 392px;
@@ -784,17 +989,33 @@
                     width: 303px;
                     height: 249px;
                 }
+                @include breakpoint (xl){
+                    width: 250px;
+                    height: 250px;
+                }
+                @include breakpoint (md){
+                    margin-bottom: 10px;
+                    width: 320px;
+                }
 
                 ul{
-                    margin-top: 35px;
-                    margin-left: 45px;
+                    margin: 25px;
+                    border: 1px solid $white;
+                    height: 240px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
                     @include breakpoint (lg){
-                        margin-top: 10px;
-                        margin-left: 25px;
+                        margin: 10px 0 10px 0;
+                        border: 0;
+                    }
+                    @include breakpoint (xl){
+                        align-items: flex-start;
+                        padding-left: 10px;
                     }
 
                     li{
-                        padding-bottom: 21px;
                         font-family: $Montserrat;
                         font-weight: $light;
                         font-size: $fz14;
@@ -809,17 +1030,10 @@
                         margin-right: 23px;
                     }
                 }
-                button{
-                    margin-top: 9px;
-                    margin-left: 45px;
-                    width: 155px;
-                    height: 36px;
-                    font-family: $Montserrat;
-                    font-weight: $bold;
-                    font-size: $fz13;
-                    color: $blue;
-                    border: none;
-                    border-radius: 3px;
+            }
+            div:first-child{
+                @include breakpoint (xl){
+                    margin-right: 5px;
                 }
             }
         }
@@ -843,6 +1057,153 @@
 
 
 //Blog
+.sticky{
+    position: sticky;
+    top: 0;
+    @include breakpoint (xl){
+        position: relative;
+    }
+   
+.header_sticky{
+    color: $white;
+    background-color: $blue;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @include breakpoint (md){
+       display: none;
+     }
+    .contanier{          
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint (xl){
+            flex-direction: column;
+        }
+        @include breakpoint (md){
+           padding: 10px;
+           border: 10px solid $blue;
+         }
+        }
+        .contact{
+            position: relative;
+        }
+        .contact:hover .tel{
+            display: block;
+            @include breakpoint (md){
+                display: none;
+             }
+        }
+        .tel{
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            color: $blue;
+        }
+        ul{
+           display: flex;
+           @include breakpoint (xl){
+              padding-top: 26px;
+            }
+            @include breakpoint (md){
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              margin-left: 31px;
+        }
+
+        li{
+            margin-right: 50px;
+            font-family: $Montserrat;
+            font-weight: $light;
+            font-size: $fz14;
+            @include breakpoint (lg){
+                margin-right: 30px;
+            }
+            @include breakpoint (xl){
+                font-size: 16px;
+                margin-right: 20px;
+            }
+            @include breakpoint (md){
+                margin-bottom: 10px;
+                color: $blue;
+            }
+         
+            &:last-child{
+                margin-right: 0px;
+            }
+        }
+        li:hover{
+            color: $darkblue;
+            @include breakpoint (md){
+                color: $white;
+             }
+        }
+        li:nth-child(6), li:nth-child(3){
+            @include breakpoint (xl){
+                display: none;
+            }
+            @include breakpoint (md){
+                display: none;
+            }
+        }
+        li:last-child{
+            display: none;
+            @include breakpoint (xl){
+                display: block;
+            }
+        }
+    }
+}
+
+
+.md{
+    display: none;
+    @include breakpoint(md){
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        img{
+            width: 100px;
+            height: 100px;
+            margin: 20px 0;
+        }
+        .btn{
+            width: 150px;
+            height: 70px;
+            background-color: $blue;
+            border: none;
+            margin-top: 50px;
+            font-family: $ElMessiri;
+            font-size: $fz24;
+        }
+        .btn-primary:hover{
+            background-color: $dark;
+        }
+        .offcanvas-header{
+            background-color: #096a91fc;
+            .offcanvas-title{
+                font-family: $ElMessiri;
+                font-size: $fz24;
+                color: $white;
+            }
+        }
+        .offcanvas{
+            background-color: #123a4afc;
+        }
+        ul{
+            margin-top: 50px;
+            li{
+                margin-bottom: 15px;
+                color: $white;
+                font-family: $Montserrat;
+                font-size: $fz20;
+            }
+        }
+    }
+}
+}
 .content-blog{
     color: $white;
     margin: 50px 0 30px 0;
@@ -875,24 +1236,45 @@
         }
         }
         .contanier_blog1, .contanier_blog2{
-            height: 530px;
             border: 1px solid $blue;
             border-radius: 20px;
             display: flex;
             justify-content: space-around;
             padding-top: 50px;
+            padding-bottom: 50px;
+            @include breakpoint(xl){
+                flex-direction: column;
+                align-items: center;
+            }
+
             .foto{
                 background: url(../img/image.jpg);
                 width: 564px;
-                height: 430px;
+                height: 317px;
                 border-radius: 10px;
+                @include breakpoint(lg){
+                    width: 464px;
+                    height: 317px;
+                }
+                @include breakpoint(xl){
+                    margin-bottom: 30px;
+                }
+                @include breakpoint(md){
+                    width: 320px;
+                }
+
             }
             .text{
                 width: 564px;
-                height: 430px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                @include breakpoint(lg){
+                    width: 464px;
+                }
+                @include breakpoint(md){
+                    width: 320px;
+                }
                 button:nth-child(1), button:nth-child(4){
                     width: 96px;
                     height: 30px;
@@ -905,7 +1287,11 @@
                 }
                 button:nth-child(4){
                     width: 134px;
-                    height: 39px;
+                    height: 49px;
+                    margin-bottom: 10px;
+                }
+                .content_toggle, .content_toggle1:hover{
+                    cursor: pointer;
                 }
                 p:nth-child(2){
                     font-family: $ElMessiri;
@@ -917,6 +1303,11 @@
                     font-weight: $thin;
                     font-size: $fz16;
                 }
+                p, button{
+                    @include breakpoint(xl){
+                        margin-bottom: 20px;
+                    }
+                }
             }
         }
         .contanier_blog2{
@@ -927,6 +1318,10 @@
             justify-content: space-between;
             margin-top: 30px;
             font-size: $fz14;
+            @include breakpoint(xl){
+                width: 760px;
+                justify-content: space-around;
+            }
         }
     }
 }
@@ -944,6 +1339,12 @@
         font-weight: $superbold;
         font-size: $fz42;
         margin: 60px 0 60px 0;
+        @include breakpoint (xl){
+            font-size: 32px;
+        }
+        @include breakpoint (md){
+            margin-bottom: 20px;
+         }
     
         .list, .list1{
             width: 28px;
@@ -951,6 +1352,9 @@
             background: $blue;
             border-radius: 7px;
             @include breakpoint (md){
+                display: none;
+            }
+            @include breakpoint (xl){
                 display: none;
             }
         }
@@ -969,11 +1373,21 @@
             justify-content: space-around;
             padding-top: 50px;
             margin: 0 0 120px 0;
+            @include breakpoint (xl){
+                flex-direction: column-reverse;
+                align-items: center;
+             }
+             @include breakpoint(md){
+                margin-bottom: 50px;
+             }
             .foto{
                 background: url(../img/image.jpg);
                 width: 564px;
                 height: 430px;
                 border-radius: 10px;
+                @include breakpoint (md){
+                    width: 460px;
+                 }
             }
             .text{
                 width: 564px;
@@ -981,6 +1395,13 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                @include breakpoint (xl){
+                    margin-top: 50px;
+                 }
+                 @include breakpoint (md){
+                     width: 320px;
+                     height: auto;
+                  }
             }
             .cost{
                 display: none;
@@ -1008,17 +1429,29 @@
                 font-weight: $superbold;
                 color: $white;
                 position: absolute;
-                top: 420px;
+                top: 815px;
+                @include breakpoint (xl){
+                    top: 1345px;
+                 }
+                 @include breakpoint (md){
+                     top: 1440px;
+                  }
             }
-            p:nth-child(3){
+            p:first-child{
                 font-family: $ElMessiri;
                 font-size: $fz24;
                 font-weight: $superbold;
+                @include breakpoint (md){
+                    margin-bottom: 20px;
+                 }
             }
-            p:nth-child(4){
+            p:nth-child(2){
                 font-family: $Montserrat;
                 font-weight: $thin;
                 font-size: $fz16;
+                @include breakpoint (md){
+                    margin-bottom: 20px;
+                 }
             }
         }
         .endblog{
@@ -1064,10 +1497,72 @@
 
 
 //news
+.md{
+    display: none;
+    @include breakpoint(md){
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        img{
+            width: 100px;
+            height: 100px;
+            margin: 20px 0;
+        }
+        .btn{
+            width: 150px;
+            height: 70px;
+            background-color: $blue;
+            border: none;
+            margin-top: 50px;
+            font-family: $ElMessiri;
+            font-size: $fz24;
+        }
+        .btn-primary:hover{
+            background-color: $dark;
+        }
+        .offcanvas-header{
+            background-color: #096a91fc;
+            .offcanvas-title{
+                font-family: $ElMessiri;
+                font-size: $fz24;
+                color: $white;
+            }
+        }
+        .offcanvas{
+            background-color: #123a4afc;
+        }
+        ul{
+            margin-top: 50px;
+            li{
+                margin-bottom: 15px;
+                color: $white;
+                font-family: $Montserrat;
+                font-size: $fz20;
+            }
+        }
+    }
+}
+.news_front{
+    .header{
+        .contanier{
+            ul{
+                li:last-child{
+                    display: none;
+                    @include breakpoint(xl){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
 .news{
     color: $white;
     margin: 50px 0 30px 0;
     .contanier{
+        @include breakpoint(md){
+            margin-top: -71px;
+        }
         .text-list{
         display: flex;
         justify-content: center;
@@ -1099,16 +1594,42 @@
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 120px;
+            @include breakpoint(lg){
+               justify-content: center;
+            }
             & div{
                 width: 416px;
                 height: 258px;
                 position: relative;
+                @include breakpoint(lg){
+                    width: 390px;
+                }
                 &:nth-child(1), &:nth-child(2), &:nth-child(4), &:nth-child(5){
                     margin-right: 24px;
+                    @include breakpoint(lg){
+                       margin-right: 50px;
+                    }
                 }
                 &:nth-child(1), &:nth-child(2), &:nth-child(3){
                     margin-bottom: 24px;
+                    @include breakpoint(lg){
+                       margin-right: 50px;
+                    }
                 }
+                &:nth-child(5){
+                    @include breakpoint(lg){
+                       margin-left: -50px;
+                    }
+                    @include breakpoint(xl){
+                       margin-left: 0;
+                       margin-top: 20px;
+                    }
+                }
+                &:nth-child(6){
+                    @include breakpoint(xl){
+                       margin-left: -50px;
+                       margin-top: 20px;
+                    }}
                 a{
                     display: block;
                     background: url(../img/underwother.png);
@@ -1151,6 +1672,9 @@
     color: $white;
     margin: 50px 0 30px 0;
     .contanier{
+        @include breakpoint(md){
+            margin-top: -71px;
+        }
         .text-list{
         display: flex;
         justify-content: center;
@@ -1158,6 +1682,9 @@
         font-weight: $superbold;
         font-size: $fz42;
         margin: 60px 0 60px 0;
+        @include breakpoint (md){
+            margin-bottom: 30px;
+        }
     
         .list, .list1{
             width: 28px;
@@ -1185,15 +1712,34 @@
             justify-content: space-around;
             padding-top: 50px;
             margin-bottom: 120px;
+            @include breakpoint(lg){
+                flex-direction: column;
+                align-items: center;
+            }
+            @include breakpoint(md){
+                margin: 0 0 50px 0;
+            }
             .foto{
                 background: url(../img/image.jpg);
                 width: 564px;
                 height: 430px;
                 border-radius: 10px;
                 margin-bottom: 50px;
+                @include breakpoint(md){
+                    width: 390px;
+                    height: 300px;
+                    background-size: 390px auto;
+                    background-repeat: no-repeat;
+                    margin: 0 auto;
+                    border: solid 1px $blue;
+                }
             }
             .text{
                 width: 564px;
+                @include breakpoint(md){
+                    width: 320px;
+                    margin-top: 20px;
+                }
                 p{
                     padding-bottom: 30px;
                     &:first-child{
@@ -1207,18 +1753,36 @@
                         font-size: $fz16;
                     }
                 }
-            }
-            button{
-                width: 134px;
-                height: 39px;
-                background: $blue;
-                border-radius: 5px;
-                font-family: $Montserrat;
-                font-size: $fz14;
-                font-weight: $superbold;
+            }    
+            div button{
+                width: 155px;
+                height: 36px;
+                background-color: $blue;
+                margin-bottom: 30px;
+                text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
                 color: $white;
-                margin-bottom: 50px;
+                border: none;
+                border-radius: 3px;
+                font-family: $Montserrat;
+                font-weight: $bold;
+                font-size: $fz13;
+                overflow: hidden;background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+                background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+                background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+                background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+                background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+                
             }
+            div button:hover{
+                cursor: pointer;
+                  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
+                  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+                  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+                  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+                  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+                  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+            }
+            
         }
         .endblog{
             display: flex;

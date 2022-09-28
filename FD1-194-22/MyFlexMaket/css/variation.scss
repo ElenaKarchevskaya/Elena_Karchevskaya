@@ -29,19 +29,15 @@ $fz64: 64px;
 //contaniers
 $xl: 1296px;
 
-//@media
-//1295px
-//1024px
-//767px
-//576px
-$breakpoint_xxl: 1297px;
+
+$breakpoint_xxl: 1320px;
 $breakpoint_xl: 1024px;
-$breakpoint_md: 767px;
-$breakpoint_sm: 576px;
+$breakpoint_md: 768px;
+//$breakpoint_sm: 576px;
 
 @mixin breakpoint($point) {
     @if $point == lg {
-        @media (max-width: 1295px){@content;}
+        @media (max-width: 1320px){@content;}
     }
 
     @else if $point == xl {
@@ -49,11 +45,11 @@ $breakpoint_sm: 576px;
     }
 
     @else if $point == md {
-        @media (max-width: 757px){@content;}
+        @media (max-width: 768px){@content;}
     }
 
-    @else if $point == sm {
+   /* @else if $point == sm {
         @media (max-width: 476px){@content;}
-    }
+    }*/
     
 }

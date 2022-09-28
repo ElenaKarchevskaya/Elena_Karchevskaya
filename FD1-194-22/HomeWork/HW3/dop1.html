@@ -1,173 +1,55 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .flexbox{
-            display: flex;
-            width: 100%;
-            flex-direction: row;
-            background-color: rgb(226, 247, 252);
-        }
-        .flexbox_item{
-            width: 25%;
-            padding: 5px;
-        }
-        .flexbox_item1{
-            width: 50%;
-            padding: 5px;
-        }
-        .header{
-            margin: 0px 0px;
-            padding: 20px 20px; 
-            text-align: center;
-            width: 100%;
-        }
-        .footer{
-            margin: 0px 0px;
-            padding: 15px 15px;
-            text-align: center;
-            width: 100%;
-        }
-        img{
-            width: 100px;
-            height: 70px;
-        }
-        .item2{
-            width: 820px;
-            height: 470px;
-        }
-        .item4{
-            width: 820px;
-            height: 546px;
-        }
-        .item3{
-            width: 50px;
-            height: 50px;
-        }
-        .table {
-	        width: 70%;
-	        border: none;
-            margin: 20px 200px;
-            height: 300px;
-        }
-        .table thead td {
-	        text-align: center;
-	        border: none;
-	        padding: 10px;
-	        background: rgb(203, 221, 225);
-	        font-size: 14px;
-        }
-        .table td{
-	        padding: 5px 10px;
-	        text-align: left;
-        }
-        .table tbody tr:nth-child(odd){
-	        background:rgb(226, 247, 252);
-        }
-        .table tbody tr:nth-child(even){
-	        background: rgb(203, 221, 225);
-        }
-    </style>
 </head>
 <body>
-    <h1 class="header">Формат изображений WebP: что это такое и зачем он нужен. Сравнение с PNG, JPEG, GIF.</h1>
-    <div><strong> WebP</strong> — это формат файла, разработанный компанией Google в 2010 году.
-        Его особенностью является продвинутый алгоритм сжатия, позволяющий сократить размер картинки без видимых потерь в качестве.
-        WebP ― относительно новый формат графических файлов, который обеспечивает отличное сжатие изображений при сохранении качества. Чем меньше весит графика ― тем быстрее загружаются страницы сайта, это важно и для поискового продвижения, и для удобства пользователей. 
+    <a class="content_toggle" href="#">Показать текст</a>
 
-В основном, владельцы сайтов на UMI.CMS используют форматы JPEG, GIF и PNG. Формат WebP — эта альтернатива, позволяющая получать качественные картинки с меньшим весом, и с версии UMI.CMS 22 система поддерживает изображения в этом формате.
+<div class="content_block" style="display: none;">
+	<p>Скрытый текст в основном используется при создание сайта с большим объёмом содержания страницы, или для сокрытия определённой информации, которая нужна только заинтересованным пользователям.</p>	
 </div>
-    <div class="flexbox">
-        <div class="flexbox_item"><img src="img/WEBP.jpg" alt="">
-             В среднем вес картинок сокращается на <strong>25–35%</strong>.
-             WebP — очень полезный формат изображений, поскольку он предлагает как оптимизацию производительности, так и богатый функционал.
-             В отличие от других форматов, WebP поддерживает сжатие как с потерями, так и без потерь, а также прозрачность и анимацию.
-        </div>
-        <div class="flexbox_item"><img src="img/PNG.jpg" alt="">
-            Файлы <strong> PNG</strong> легко редактируются и открываются в любом распространенном инструменте редактирования изображений.
-            PNG использует сжатие без потерь, однако это требует большего размера файла и не может сравниться с векторными изображениями.
-        </div>
-        <div class="flexbox_item"><img src="img/JPG.jpg" alt="">
-            JPEG (он же JPG) — это формат изображений, который использует сжатие с потерями и не поддерживает прозрачность.
-            JPG в зависимости от настроек может обеспечить сжатие как 2:1, так и 100:1 — но качество прямо пропорционально коэффициенту сжатия.
-            <strong>С прикладной точки зрения JPEG оптимален для изображений с большим количеством цветов, например, для фотографий.</strong> 
-        </div>
-        <div class="flexbox_item"><img src="img/GIF1.jpg" alt="">
-            В простейшей форме <strong>GIF</strong> (произносится как «гиф» или «джиф») - это просто файл изображения . 
-            Подобно форматам файлов JPEG или PNG, формат GIF можно использовать для создания неподвижных изображений.
-            Но у формата GIF есть особенность - его также можно использовать для <ins> создания анимированных изображений</ins>.
-        </div>
-    </div>
-    <h2 class="footer">А теперь посмотрим наглядно на все 4 формата на примере.</h2>
-    <div class="flexbox">
-        <div class="flexbox_item1"><img src="img/197886.webp" class="item2" alt="koala"> WebP 64,3 КБ
-        </div>
-        <div class="flexbox_item1"><img src="img/197886.png" class="item2" alt="koala"> PNG 1,62 МБ
-        </div>
-    </div>
-    <div class="flexbox">
-        <div class="flexbox_item1"><img src="img/197886.jpg" class="item2" alt="koala"> JPEG 101 КБ
-        </div>
-        <div class="flexbox_item1"><img src="img/197886.gif" class="item2" alt="koala"> GIF 353 КБ
-        </div>
-    </div>
-    <h2 class="footer">Как мы видим формат GIF нам не подходит. PNG сохранил качество фото, но вес у него огромный. Внешних отличий между WebP и JPG практически нет, но вот вес WebP значительно ниже. Попробуем сделать сжатие и уменьшить вес каждого фото. </h2>
-    <div class="flexbox">
-        <div class="flexbox_item1"><img src="img/koala.webP" class="item4" alt="koala"><img src="img/green.png" class="item3" alt="green"> WebP 44,4 КБ
-        </div>
-        <div class="flexbox_item1"><img src="img/koala.png" class="item4" alt="koala"><img src="img/red.png" class="item3" alt="red"> PNG 137 КБ
-        </div>
-    </div>
-    <div class="flexbox">
-        <div class="flexbox_item1"><img src="img/koala1.jpeg" class="item4" alt="koala"><img src="img/green.png" class="item3" alt="green"> JPEG 62 КБ 
-        </div>
-        <div class="flexbox_item1"><img src="img/koala.gif" class="item4" alt="koala"><img src="img/red.png" class="item3" alt="red"> GIF 192 КБ
-        </div>
-    </div>
-<h2 class="flexbox">После сжатия мы увидели, что качество PNG так же стало хуже. С задачей справились JPG и WebP. Но в формате WebP изображение оказалось гораздо легче. Формат WebP оказался очень удобным и я вижу в нем только плюсы, если бы не одно НО! Далеко не все браузеры поддерживают этот формат. 
-    <img src="img/Untitled.png" class="item2" alt="table">
-</h2>
-<h1 class="header">Форматы в зависимости от цели использования</h1>
-<div class="flexbox">Под фотографическими изображениями понимаются полноцветные фотографии, чёрно-белые фотографии, полноцветные изображения, рисунки с большим количеством разноцветных деталей. Под графикой, логотипами, иконками — графика со множеством сплошных цветов, с небольшим количеством цветов (до 256 цветов), с текстом или линиями, с прозрачностью.</div>
-<table class="table">
-    <thead>
-        <tr>
-            <td></td>
-            <td>Фотографические изображения</td>
-            <td>Графика, логотипы, иконка</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Лучший выбор</td>
-            <td>WebP; JPEG (с оптимальной степенью сжатия).</td>
-            <td>SVG; PNG; WebP.</td>
-        </tr>
-        <tr>
-            <td>Худший выбор</td>
-            <td>GIF; SVG.</td>
-            <td>JPEG (сжатие добавляет артефакты, смазывается текст, края линий, пропадает прозрачность).</td>
-        </tr>
-        <tr>
-            <td>Лучшее качество</td>
-            <td>JPEG (минимальное сжатие); PNG; WebP.</td>
-            <td>PNG; SVG; WebP.</td>
-        </tr>
-        <tr>
-            <td>Наименьший размер файла</td>
-            <td>PEG (максимальное сжатие); WebP.</td>
-            <td>SVG; GIF.</td>
-        </tr>
-    </tbody>
-</table>
+<!--<style type="text/css">
+p {
+	font-size: 16px;
+	color: #777;
+	margin: 0 0 10px 0;
+	padding: 0;
+	line-height: 1.6;
+}
 
+.content_toggle {
+	display: inline-block;
+	padding: 15px 20px;
+	background: #672cc5;
+	font-size: 16px;
+	text-decoration: none;
+	color: #fff;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border-bottom: 3px solid #32145a;
+}
+.content_toggle:hover {
+	color: #fff;
+	background: #7c4acc;
+	border-bottom: 3px solid #32145a;
+}
+.content_toggle:active {
+	background: #34106d;
+}
+</style>-->
 
-
-
-
+<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.content_toggle').click(function(){
+		$('.content_block').slideToggle(300);      
+		return false;
+	});
+});
+</script>
 </body>
 </html>
